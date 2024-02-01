@@ -16,4 +16,10 @@ body::-webkit-scrollbar-thumb {
 
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
+  background-color: #283044;
+  height: 300vh;
+}
+
+.demo {
+  height: 600px;
 }
