@@ -7,7 +7,6 @@ import {
   SearchIcon,
 } from "./styles/Header.styled";
 import { FaSearch } from "react-icons/fa";
-// import Headroom from "react-headroom";
 
 const Headers = () => {
   return (

@@ -14,7 +14,7 @@ export const Heading = styled('div')(() => ({
 
 export const Container = styled('div')(() => ({
   margin: '20px 0',
-  height: '40vh',
+  minHeight: '310px',
   backgroundColor: '#1e2433',
   borderRadius: '25px',
   boxShadow: 'inset 0 0 25px 0 black',
@@ -27,7 +27,7 @@ export const Container = styled('div')(() => ({
 export const Card = styled('div')(() => ({
   borderRadius: '10px',
   width: '15%',
-  height: '35vh',
+  minHeight: '271px',
   backgroundColor: 'white',
   overflow: 'hidden',
 }))
@@ -35,7 +35,6 @@ export const Card = styled('div')(() => ({
 export const CardImage = styled('img')(() => ({
   width: '100%',
   height: '100%',
-  backgroundSize: 'fit'
 }))
 
 export const CardInfo = styled('div')(() => ({

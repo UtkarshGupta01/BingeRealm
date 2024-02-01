@@ -14,8 +14,7 @@ export const NavBar = styled('nav')(() => ({
   fontSize: '20px',
   fontWeight: '600',
   // backgroundColor: '#1e2433d4',
-  backgroundColor: 'rgb(255,255,255,0)',
-  // backdropFilter: 'blur(15px)'
+  backdropFilter: 'blur(5px)'
 }));
 
 export const SearchIcon = styled('div')(() => ({

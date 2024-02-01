@@ -8,7 +8,7 @@ export const HeroContainer = styled('div')(() => ({
   borderRadius: '5px',
   overflow: 'hidden',
   width: '100%',
-  height: "90vh"
+  height: "660px"
 }))
 
 export const HeroVid = styled('video')(() => ({
