@@ -3,6 +3,11 @@ import styled from "@emotion/styled";
 export const NavBar = styled('nav')(() => ({
   display: 'flex',
   justifyContent: 'space-between',
+  position: 'fixed',
+  top: '0',
+  left: '0',
+  width: '90%',
+  zIndex: '99',
   padding: '0 5%',
   alignItems: 'center',
   color: 'white',
@@ -10,7 +15,7 @@ export const NavBar = styled('nav')(() => ({
   fontWeight: '600',
   // backgroundColor: '#1e2433d4',
   backgroundColor: 'rgb(255,255,255,0)',
-  backdropFilter: 'blur(15px)'
+  // backdropFilter: 'blur(15px)'
 }));
 
 export const SearchIcon = styled('div')(() => ({
