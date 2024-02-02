@@ -33,9 +33,8 @@ export const SearchBar = styled('input')(() => ({
 
 export const SearchIcon = styled('div')(() => ({
   backgroundColor: '#283044',
-  fontSize: "20px",
-  padding: '8px 14px',
-  borderRadius: '5px'
-
-
+  fontSize: "30px",
+  padding: '4px 10px 0',
+  borderRadius: '5px',
+  cursor: 'pointer',
 }))

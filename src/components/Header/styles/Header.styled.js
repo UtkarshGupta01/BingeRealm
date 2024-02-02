@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const NavBar = styled('nav')(() => ({
+export const NavBar = styled('nav')(({ scrolling }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   position: 'fixed',
@@ -13,8 +13,9 @@ export const NavBar = styled('nav')(() => ({
   color: 'white',
   fontSize: '20px',
   fontWeight: '600',
-  // backgroundColor: '#1e2433d4',
-  backdropFilter: 'blur(5px)'
+  backgroundColor: scrolling ? "#1e2433eb" : "transparent",
+  transition: "background-color 0.3s ease-in-out",
+  backdropFilter: 'blur(3.5px)'
 }));
 
 export const SearchIcon = styled('div')(() => ({
@@ -26,7 +27,8 @@ export const SearchIcon = styled('div')(() => ({
 }))
 
 export const Logo = styled('img')(() => ({
-  width: '90%'
+  width: '90%',
+  cursor: 'pointer'
 }))
 
 export const NavUl = styled('ul')(() => ({

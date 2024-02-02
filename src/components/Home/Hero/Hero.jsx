@@ -1,4 +1,4 @@
-import heroDemo from "/gif/hero_demo.mp4";
+// import heroDemo from "/gif/hero_demo.mp4";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <HeroVid src={heroDemo} autoPlay loop muted />
+      {/* <HeroVid src={heroDemo} autoPlay loop muted /> */}
       <WelcomeArea>
         <Welcome>
           Welcome to Binge<font color="red">Verse</font>
