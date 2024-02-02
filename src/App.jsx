@@ -6,31 +6,35 @@ import SearchPage from "./components/Search/Search";
 import { fetchData } from "./utils/api";
 import { getApiConfiguration } from "./store/homeSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const { url } = useSelector((state) => state.home);
   const dispatch = useDispatch();
   useEffect(() => {
-    apitesting();
+    fetchApiConfig();
   }, []);
 
-  const apitesting = () => {
-    fetchData("/movie/popular").then((res) => {
+  const fetchApiConfig = () => {
+    fetchData("/configuration").then((res) => {
       console.log(res);
-      dispatch(getApiConfiguration(res));
+
+      const url = {
+        poster: res.images.secure_base_url + "original",
+        profile: res.images.secure_base_url + "original",
+      };
+      dispatch(getApiConfiguration(url));
     });
   };
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //   </Routes>
-    // </BrowserRouter>
-    <>
-      <Headers></Headers>
-      <Home></Home>
-      {/* <SearchPage></SearchPage> */}
-    </>
+    <Router>
+      <Headers />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

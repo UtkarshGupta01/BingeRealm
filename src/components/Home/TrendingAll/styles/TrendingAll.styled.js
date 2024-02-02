@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
 
-
-export const TrendingSection = styled('div')(() => ({
-  margin: '30px 4% 30px 4%'
-}))
-
 export const Heading = styled('div')(() => ({
   color: 'white',
   fontSize: '25px',

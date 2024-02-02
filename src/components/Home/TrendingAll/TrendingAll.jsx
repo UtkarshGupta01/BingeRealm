@@ -1,5 +1,5 @@
+import { Section } from "../Home.styled";
 import {
-  TrendingSection,
   Heading,
   Container,
   Card,
@@ -10,7 +10,7 @@ import dummy from "/images/dummy.jpeg";
 
 const TrendingAll = () => {
   return (
-    <TrendingSection>
+    <Section>
       <Heading>Trending</Heading>
       <Container>
         <Card>
@@ -22,7 +22,7 @@ const TrendingAll = () => {
         <Card></Card>
         <Card></Card>
       </Container>
-    </TrendingSection>
+    </Section>
   );
 };
 
