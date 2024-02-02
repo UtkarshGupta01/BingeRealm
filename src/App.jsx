@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
 import Headers from "./components/Header/Header";
-import Home from "./components/Home/Home";
-import SearchPage from "./components/Search/Search";
+import Home from "./pages/Home/Home";
+import SearchPage from "./pages/Search/Search";
 import { fetchData } from "./utils/api";
 import { getApiConfiguration } from "./store/homeSlice";
 import { useDispatch, useSelector } from "react-redux";
