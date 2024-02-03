@@ -13,8 +13,9 @@ export const NavBar = styled.nav`
   color: white;
   font-size: 20px;
   font-weight: 600;
-  background-color: ${(props) => (props.scrolling ? "#1e2433eb" : "transparent")};
-  transition: background-color 0.3s ease-in-out;
+  background-color: ${({ setnavbar }) => (setnavbar === "show" ? "#1e2433eb" : "transparent")};
+  transform:${({ setnavbar }) => (setnavbar === "hide" ? "translateY(-80px)" : "none")} ;
+  transition: all 0.3s ease-in-out;
   backdrop-filter: blur(3.5px);
 `;
 

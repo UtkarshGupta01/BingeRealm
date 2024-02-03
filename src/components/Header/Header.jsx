@@ -11,7 +11,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Headers = () => {
-  const [scrolling, setScrolling] = useState(false);
+  const [navbar, setNavbar] = useState("top");
+  const [prevScrollVal, setPrevScrollVal] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,19 +20,33 @@ const Headers = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  useEffect(() => {
-    const handleNavbar = () => {
-      if (window.scrollY > 500) {
-        setScrolling(true);
+  const handleNavbar = () => {
+    if (window.scrollY > 200) {
+      if (window.scrollY > prevScrollVal) {
+        console.log("hide");
+        console.log(prevScrollVal);
+        console.log(window.scrollY);
+        setNavbar("hide");
       } else {
-        setScrolling(false);
+        console.log("show");
+        console.log(prevScrollVal);
+        console.log(window.scrollY);
+        setNavbar("show");
       }
-    };
+    } else {
+      console.log("top");
+      console.log(prevScrollVal);
+      console.log(window.scrollY);
+      setNavbar("top");
+    }
+    setPrevScrollVal(window.scrollY);
+  };
+  useEffect(() => {
     window.addEventListener("scroll", handleNavbar);
     return () => {
       window.removeEventListener("scroll", handleNavbar);
     };
-  }, []);
+  }, [prevScrollVal]);
 
   const handleHeaderNavigation = (type) => {
     if (type == "home") {
@@ -45,7 +60,7 @@ const Headers = () => {
     }
   };
   return (
-    <NavBar scrolling={scrolling}>
+    <NavBar setnavbar={navbar}>
       <div className="logo">
         <Logo
           src={logo}

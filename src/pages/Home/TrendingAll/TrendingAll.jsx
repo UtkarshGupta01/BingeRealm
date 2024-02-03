@@ -1,28 +1,24 @@
 import SectionWrapper from "../../../components/SectionWrapper/SectionWrapper";
-import { Heading } from "./styles/TrendingAll.styled";
+import { Heading, HeadingContainer } from "./styles/TrendingAll.styled";
 import Carousal from "../../../components/Carousal/Carousal";
-import CarousalItem from "../../../components/CarousalItem/CarousalItem";
+import TabSwitch from "../../../components/TabSwitch/TabSwitch";
+import { useState } from "react";
+import useFetch from "../../../hooks/useFetch";
 
 const TrendingAll = () => {
+  const [tab, setTab] = useState("day");
+  const { data, loading } = useFetch(`/trending/all/${tab}`);
+
+  const onTabChange = (tab) => {
+    setTab(tab === "Day" ? "day" : "week");
+  };
   return (
     <SectionWrapper>
-      <Heading>Trending</Heading>
-      <Carousal>
-        <CarousalItem />
-        <CarousalItem />
-        <CarousalItem />
-        <CarousalItem />
-        <CarousalItem />
-
-        {/* <Card>
-          <CardImage src={dummy} alt="poster" />
-          <CardInfo></CardInfo>
-        </Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card> */}
-      </Carousal>
+      <HeadingContainer>
+        <Heading>Trending</Heading>
+        <TabSwitch data={["Day", "Week"]} onTabChange={onTabChange} />
+      </HeadingContainer>
+      <Carousal data={data?.results} loading={loading} />
     </SectionWrapper>
   );
 };

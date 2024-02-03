@@ -5,3 +5,9 @@ export const Heading = styled.div`
   font-size: 25px;
   font-weight: 600;
 `;
+
+export const HeadingContainer = styled.div`
+display: flex;
+align-items: center;
+gap: 40px;
+`
