@@ -23,8 +23,8 @@ const TabSwitch = ({ data, onTabChange }) => {
       <TabItems>
         {data.map((tab, index) => (
           <Tabs
-            selectedtab={selectedTab}
-            index={index}
+            $selectedtab={selectedTab}
+            $index={index}
             onClick={() => activeTab(tab, index)}
             key={index}
           >

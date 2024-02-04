@@ -23,7 +23,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 80px;
-color: ${({ selectedtab, index }) => (selectedtab === index ? "white" : "black")};
+color: ${({ $selectedtab, $index }) => ($selectedtab === $index ? "white" : "black")};
 font-size: 16px;
 font-weight: 500;
 position: relative;

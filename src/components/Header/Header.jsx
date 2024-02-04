@@ -51,7 +51,7 @@ const Headers = () => {
     }
   };
   return (
-    <NavBar setnavbar={navbar}>
+    <NavBar $setnavbar={navbar}>
       <div className="logo">
         <Logo
           src={logo}
