@@ -1,18 +1,31 @@
 import React, { useRef } from "react";
+import Item from "../CarousalItem/Item";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 import LazyLoadImg from "../LazyLoad/LazyLoadImg";
-import { CarousalSection } from "./Carousal.styled";
-import CarousalItem from "../CarousalItem/CarousalItem";
+import {
+  CarousalSection,
+  NavArrowLeft,
+  NavArrowRight,
+  CarousalItems,
+} from "./Carousal.styled";
+import poster from "/images/Poster.png";
 
-const Carousal = () => {
+const Carousal = ({ data, loading }) => {
+  // const carousalContainer = useRref();
   return (
     <CarousalSection>
-      <CarousalItem />
-      <CarousalItem />
-      <CarousalItem />
+      <CarousalItems>
+        <Item />
+      </CarousalItems>
+      <NavArrowLeft>
+        <FaArrowLeft />
+      </NavArrowLeft>
+      <NavArrowRight>
+        <FaArrowRight />
+      </NavArrowRight>
     </CarousalSection>
   );
 };

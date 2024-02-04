@@ -23,20 +23,11 @@ const Headers = () => {
   const handleNavbar = () => {
     if (window.scrollY > 200) {
       if (window.scrollY > prevScrollVal) {
-        console.log("hide");
-        console.log(prevScrollVal);
-        console.log(window.scrollY);
         setNavbar("hide");
       } else {
-        console.log("show");
-        console.log(prevScrollVal);
-        console.log(window.scrollY);
         setNavbar("show");
       }
     } else {
-      console.log("top");
-      console.log(prevScrollVal);
-      console.log(window.scrollY);
       setNavbar("top");
     }
     setPrevScrollVal(window.scrollY);

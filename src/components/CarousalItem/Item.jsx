@@ -1,21 +1,21 @@
 import Cards from "../Cards/Cards";
 import {
-  Items,
+  CarousalItem,
   CardMediaInfo,
   CardMediaName,
   CardMediaDate,
-} from "./styles/CarousalItem.styled";
+} from "./styles/Item.styled";
 
-const CarousalItem = () => {
+const Item = () => {
   return (
-    <Items>
+    <CarousalItem>
       <Cards />
       <CardMediaInfo>
         <CardMediaName>Animal</CardMediaName>
         <CardMediaDate>20 Dec, 2023</CardMediaDate>
       </CardMediaInfo>
-    </Items>
+    </CarousalItem>
   );
 };
 
-export default CarousalItem;
+export default Item;

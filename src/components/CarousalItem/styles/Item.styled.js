@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Items = styled.div`
+export const CarousalItem = styled.div`
+width: 200px;
+
 `
 export const CardMediaInfo = styled.div`
 padding: 10px 10px 0;
