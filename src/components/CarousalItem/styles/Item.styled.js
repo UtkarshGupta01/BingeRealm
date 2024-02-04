@@ -2,16 +2,21 @@ import styled from "styled-components";
 
 export const CarousalItem = styled.div`
 width: 200px;
+cursor: pointer;
+flex-shrink: 0;
+transition: all 0.35s;
+&:hover{
+  transform: scale(1.05);
+}
 
 `
 export const CardMediaInfo = styled.div`
-padding: 10px 10px 0;
+padding-top: 10px;
 color: white;
 `
 export const CardMediaName = styled.div`
-font-size: 20px;
+font-size: 18px;
 font-weight: 500;
-letter-spacing: 0.5px;
 `
 export const CardMediaDate = styled.div`
 font-size: 14px;

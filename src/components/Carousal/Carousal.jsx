@@ -14,12 +14,44 @@ import {
 import poster from "/images/Poster.png";
 
 const Carousal = ({ data, loading }) => {
-  // const carousalContainer = useRref();
+  console.log(data);
+  const { url, genres } = useSelector((state) => state.home);
   return (
-    <CarousalSection>
-      <CarousalItems>
-        <Item />
-      </CarousalItems>
+    <CarousalSection className="carousel">
+      {!loading ? (
+        <CarousalItems className="carouselItems">
+          {data?.map((item) => {
+            const posterUrl = item.poster_path
+              ? url.poster + item.poster_path
+              : poster;
+            let mediaType = "";
+            // let genres = [];
+            {
+              item.genre_ids.map((g) => {
+                console.log(genres[g].name);
+              });
+            }
+            if (item.media_type === "tv") {
+              mediaType = "TV";
+            } else {
+              mediaType = "Movie";
+            }
+            return (
+              <Item
+                key={item.id}
+                posterUrl={posterUrl}
+                posterName={item.title || item.original_name}
+                posterRelease={dayjs(
+                  item.first_air_date || item.release_date
+                ).format("DD MMM, YYYY")}
+                mediaType={mediaType}
+              />
+            );
+          })}
+        </CarousalItems>
+      ) : (
+        <span>Loading....</span>
+      )}
       <NavArrowLeft>
         <FaArrowLeft />
       </NavArrowLeft>

@@ -1,10 +1,11 @@
-import dummy from "/images/dummy.jpeg";
-import { Card, CardImage } from "./styles/Cards.styled";
+import { Card, CardImage, CardMedia, CardGenres } from "./styles/Cards.styled";
 
-const Cards = () => {
+const Cards = ({ posterUrl, mediaType }) => {
   return (
     <Card>
-      <CardImage src={dummy} alt="poster" />
+      <CardImage src={posterUrl} alt="poster" />
+      <CardMedia>{mediaType}</CardMedia>
+      <CardGenres></CardGenres>
     </Card>
   );
 };

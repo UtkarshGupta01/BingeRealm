@@ -4,7 +4,6 @@ import homeSlice from "./homeSlice";
 const bingeStore = configureStore({
   reducer: {
     home: homeSlice,
-
   }
 })
 
