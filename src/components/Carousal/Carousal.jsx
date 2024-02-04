@@ -15,11 +15,25 @@ import poster from "/images/Poster.png";
 
 const Carousal = ({ data, loading }) => {
   console.log(data);
-  const { url, genres } = useSelector((state) => state.home);
+  const { url } = useSelector((state) => state.home);
+  const carousalContainer = useRef();
+  const carousalNavigation = (dir) => {
+    const container = carousalContainer.current;
+
+    const scrollVal =
+      dir === "left"
+        ? container.scrollLeft - (container.offsetWidth - 20)
+        : container.scrollLeft + (container.offsetWidth - 20);
+
+    container.scrollTo({
+      left: scrollVal,
+      behaviour: "smooth",
+    });
+  };
   return (
-    <CarousalSection className="carousel">
+    <CarousalSection>
       {!loading ? (
-        <CarousalItems className="carouselItems">
+        <CarousalItems ref={carousalContainer}>
           {data?.map((item) => {
             const posterUrl = item.poster_path
               ? url.poster + item.poster_path
@@ -47,10 +61,10 @@ const Carousal = ({ data, loading }) => {
       ) : (
         <span>Loading....</span>
       )}
-      <NavArrowLeft>
+      <NavArrowLeft onClick={() => carousalNavigation("left")}>
         <FaArrowLeft />
       </NavArrowLeft>
-      <NavArrowRight>
+      <NavArrowRight onClick={() => carousalNavigation("right")}>
         <FaArrowRight />
       </NavArrowRight>
     </CarousalSection>
