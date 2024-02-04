@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import SearchPage from "./pages/Search/Search";
 import { fetchData } from "./utils/api";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
@@ -18,8 +18,6 @@ function App() {
 
   const fetchApiConfig = () => {
     fetchData("/configuration").then((res) => {
-      console.log(res);
-
       const url = {
         poster: res.images.secure_base_url + "original",
         profile: res.images.secure_base_url + "original",

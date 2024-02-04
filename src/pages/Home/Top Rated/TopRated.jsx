@@ -1,26 +1,25 @@
 import SectionWrapper from "../../../components/SectionWrapper/SectionWrapper";
-import { Heading, HeadingContainer } from "./styles/TrendingAll.styled";
+import { Heading, HeadingContainer } from "./styles/TopRated.styled";
 import Carousal from "../../../components/Carousal/Carousal";
 import TabSwitch from "../../../components/TabSwitch/TabSwitch";
 import { useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 
-const TrendingAll = () => {
-  const [tab, setTab] = useState("day");
-  const { data, loading } = useFetch(`/trending/all/${tab}`);
-
+const TopRated = () => {
+  const [tab, setTab] = useState("movie");
+  const { data, loading } = useFetch(`/${tab}/top_rated`);
   const onTabChange = (tab) => {
-    setTab(tab === "Day" ? "day" : "week");
+    setTab(tab === "Movies" ? "movie" : "tv");
   };
   return (
     <SectionWrapper>
       <HeadingContainer>
-        <Heading>Trending</Heading>
-        <TabSwitch data={["Day", "Week"]} onTabChange={onTabChange} />
+        <Heading>Top Rated</Heading>
+        <TabSwitch data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </HeadingContainer>
       <Carousal data={data?.results} loading={loading} />
     </SectionWrapper>
   );
 };
 
-export default TrendingAll;
+export default TopRated;

@@ -14,7 +14,6 @@ import {
 import poster from "/images/Poster.png";
 
 const Carousal = ({ data, loading }) => {
-  console.log(data);
   const { url } = useSelector((state) => state.home);
   const carousalContainer = useRef();
   const carousalNavigation = (dir) => {
@@ -39,16 +38,20 @@ const Carousal = ({ data, loading }) => {
               ? url.poster + item.poster_path
               : poster;
             let mediaType = "";
-            if (item.media_type === "tv") {
-              mediaType = "TV";
+            if (item.media_type) {
+              if (item.media_type === "tv") {
+                mediaType = "TV";
+              } else {
+                mediaType = "Movie";
+              }
             } else {
-              mediaType = "Movie";
+              mediaType = null;
             }
             return (
               <Item
                 key={item.id}
                 posterUrl={posterUrl}
-                posterName={item.title || item.original_name}
+                posterName={item.title || item.name}
                 posterRelease={dayjs(
                   item.first_air_date || item.release_date
                 ).format("DD MMM, YYYY")}

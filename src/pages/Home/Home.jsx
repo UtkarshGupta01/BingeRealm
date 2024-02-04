@@ -1,13 +1,15 @@
-import Explore from "./Explore/Explore";
 import Hero from "./Hero/Hero";
-import TrendingAll from "./TrendingAll/TrendingAll";
+import Popular from "./Popular/Popular";
+import TopRated from "./Top Rated/TopRated";
+import Trending from "./Trending/Trending";
 
 const Home = () => {
   return (
     <>
       <Hero></Hero>
-      <TrendingAll></TrendingAll>
-      <Explore></Explore>
+      <Trending></Trending>
+      <Popular></Popular>
+      <TopRated></TopRated>
     </>
   );
 };

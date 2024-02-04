@@ -38,5 +38,5 @@ border-radius: 5px;
 background-color:#283044;
 position: absolute;
 left: 0;
-transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.3s;
 `

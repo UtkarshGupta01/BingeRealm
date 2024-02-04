@@ -3,17 +3,19 @@ import styled from "styled-components";
 const sharedStyle = styled.div`
 color: white;
 font-size: 20px;
-background-color: rgb(0,0,0,0.4);
+background-color: rgb(0,0,0);
 padding: 10px 12px 3px;
 border-radius: 30px;
 z-index: 5;
 top: 40%;
 transition: all 0.35s;
+opacity: 0.5;
 &:hover{
-  background-color: rgb(0,0,0,0.8);
+  background-color: rgb(0,0,0);
+  opacity: 0.8;
   padding-bottom: 5px;
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 `
 

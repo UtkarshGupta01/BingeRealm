@@ -25,7 +25,7 @@ export const CardMedia = styled.div`
 `;
 
 export const CardGenres = styled.div`
-  background-color: #283044;
+  background-color: #283044d4;
   padding: 1px ;
   width: 100%;
   color: white;

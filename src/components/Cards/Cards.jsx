@@ -6,7 +6,8 @@ const Cards = ({ posterUrl, mediaType, movieGenres }) => {
   return (
     <Card>
       <CardImage src={posterUrl} alt="poster" />
-      <CardMedia>{mediaType}</CardMedia>
+      {mediaType ? <CardMedia>{mediaType}</CardMedia> : ""}
+
       <CardGenres>
         {movieGenres?.map((id) => {
           return <div key={id}>{genres[id].name}</div>;
