@@ -16,7 +16,7 @@ export const CardImage = styled.img`
 
 export const CardMedia = styled.div`
   background-color: #283044;
-  padding: 5px 10px ;
+  padding: 1px 5px ;
   color: white;
   font-size: 14px;
   font-weight: 700;
@@ -27,11 +27,16 @@ export const CardMedia = styled.div`
 
 export const CardGenres = styled.div`
   background-color: #283044;
-  padding: 5px 10px ;
+  padding: 1px ;
+  width: 100%;
   color: white;
-  font-size: 14px;
-  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap:15px ;
+  justify-content:center;
+  font-size: 12px;
+  font-weight: 500;
   position: absolute;
   bottom:0;
   right: 0;
-`;
+  `;

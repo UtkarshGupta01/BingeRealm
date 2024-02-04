@@ -25,12 +25,6 @@ const Carousal = ({ data, loading }) => {
               ? url.poster + item.poster_path
               : poster;
             let mediaType = "";
-            // let genres = [];
-            {
-              item.genre_ids.map((g) => {
-                console.log(genres[g].name);
-              });
-            }
             if (item.media_type === "tv") {
               mediaType = "TV";
             } else {
@@ -45,6 +39,7 @@ const Carousal = ({ data, loading }) => {
                   item.first_air_date || item.release_date
                 ).format("DD MMM, YYYY")}
                 mediaType={mediaType}
+                genres={item.genre_ids}
               />
             );
           })}

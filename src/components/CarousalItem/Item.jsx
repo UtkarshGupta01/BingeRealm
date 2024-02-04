@@ -6,10 +6,10 @@ import {
   CardMediaDate,
 } from "./styles/Item.styled";
 
-const Item = ({ posterUrl, posterName, posterRelease, mediaType }) => {
+const Item = ({ posterUrl, posterName, posterRelease, mediaType, genres }) => {
   return (
     <CarousalItem className="carouselItem">
-      <Cards posterUrl={posterUrl} mediaType={mediaType} />
+      <Cards posterUrl={posterUrl} mediaType={mediaType} movieGenres={genres} />
       <CardMediaInfo>
         <CardMediaName>{posterName}</CardMediaName>
         <CardMediaDate>{posterRelease}</CardMediaDate>
