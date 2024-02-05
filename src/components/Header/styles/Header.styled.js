@@ -13,8 +13,6 @@ export const NavBar = styled.nav`
   color: white;
   font-size: 20px;
   font-weight: 600;
-  /* background-color: ${({ setnavbar }) => (setnavbar === "show" ? "#1e2433eb" : "transparent")};
-  transform:${({ setnavbar }) => (setnavbar === "hide" ? "translateY(-80px)" : "none")} ; */
   background-color: ${({ $setnavbar }) => ($setnavbar === "show" ? "#1e2433eb" : "transparent")};
   transform: ${({ $setnavbar }) => ($setnavbar === "hide" ? "translateY(-80px)" : "none")};
   transition: all 0.3s ease-in-out;
