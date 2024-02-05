@@ -10,7 +10,11 @@ const Cards = ({ posterUrl, mediaType, movieGenres }) => {
 
       <CardGenres>
         {movieGenres?.map((id) => {
-          return <div key={id}>{genres[id].name}</div>;
+          return (
+            <div key={id}>
+              {genres && genres[id] ? genres[id].name : "Unknown Genre"}
+            </div>
+          );
         })}
       </CardGenres>
     </Card>
