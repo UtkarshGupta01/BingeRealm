@@ -30,8 +30,13 @@ export const SearchBar = styled.input`
 
 export const SearchIcon = styled.div`
   background-color: #283044;
-  font-size: 30px;
+  font-size: 26px;
   padding: 4px 10px 0;
   border-radius: 5px;
   cursor: pointer;
+  border:2px solid transparent;
+  transition: border 0.35s;
+  &:hover{
+    border:2px solid white;
+  }
 `;

@@ -8,7 +8,7 @@ padding: 40px 20px 30px;
 z-index: 5;
 top: 35%;
 transition: all 0.35s;
-opacity: 0.3;
+opacity: 0.5;
 display: none;
 &:hover{
   background-color: rgb(0,0,0);
@@ -63,5 +63,14 @@ padding: 12px 50px;
 &::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+`
+
+export const LoadingGif = styled.img`
+
+width: 6%;
+background-color: #272D3F;
+margin: 20px 23px;
+    padding: 108px 47px;
+border-radius: 15px;
 
 `

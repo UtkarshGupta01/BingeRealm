@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   SearchArea,
   SearchBar,
@@ -5,15 +6,24 @@ import {
   SearchIcon,
 } from "./styles/Search.styled";
 import { IoClose } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
 
-const SearchPage = () => {
-  const navigate = useNavigate("");
+const SearchPage = ({ showSearch }) => {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 27) {
+        showSearch(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showSearch]);
   return (
     <SearchContainer>
       <SearchArea>
-        <SearchBar type="text" placeholder="Search..." />
-        <SearchIcon onClick={() => navigate(`/`)}>
+        <SearchBar type="text" placeholder="Search any movie or tv show" />
+        <SearchIcon onClick={() => showSearch(false)}>
           <IoClose />
         </SearchIcon>
       </SearchArea>

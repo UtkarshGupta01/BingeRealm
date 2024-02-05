@@ -1,17 +1,18 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Item from "../CarousalItem/Item";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-import LazyLoadImg from "../LazyLoad/LazyLoadImg";
 import {
   CarousalSection,
   NavArrowLeft,
   NavArrowRight,
   CarousalItems,
+  LoadingGif,
 } from "./Carousal.styled";
 import poster from "/images/Poster.png";
+import loadingGif from "/gif/loading.gif";
 
 const Carousal = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
@@ -62,7 +63,14 @@ const Carousal = ({ data, loading }) => {
           })}
         </CarousalItems>
       ) : (
-        <span>Loading....</span>
+        <>
+          <LoadingGif src={loadingGif} alt="" />
+          <LoadingGif src={loadingGif} alt="" />
+          <LoadingGif src={loadingGif} alt="" />
+          <LoadingGif src={loadingGif} alt="" />
+          <LoadingGif src={loadingGif} alt="" />
+          <LoadingGif src={loadingGif} alt="" />
+        </>
       )}
       <NavArrowLeft onClick={() => carousalNavigation("left")}>
         <FaArrowLeft />

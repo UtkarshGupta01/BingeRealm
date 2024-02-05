@@ -12,13 +12,13 @@ import {
   SearchIcon,
 } from "./styles/Hero.styled";
 import { FaSearch } from "react-icons/fa";
-import useFetch from "../../../hooks/useFetch";
+// import useFetch from "../../../hooks/useFetch";
 
 const Hero = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  const { data, loading } = useFetch("/movie/upcoming");
+  // const { data, loading } = useFetch("/movie/upcoming");
 
   const handleSearchData = (event) => {
     if (event.key == "Enter" && query.length > 0) {
@@ -40,7 +40,7 @@ const Hero = () => {
         <SearchArea>
           <SearchBar
             type="text"
-            placeholder="Search any movie or tv show..."
+            placeholder="Search..."
             onChange={(e) => setQuery(e.target.value)}
             onKeyUp={handleSearchData}
           />

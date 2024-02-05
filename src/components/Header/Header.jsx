@@ -10,7 +10,7 @@ import { FaSearch } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Headers = () => {
+const Headers = ({ showSearch }) => {
   const [navbar, setNavbar] = useState("top");
   const [prevScrollVal, setPrevScrollVal] = useState(0);
   const navigate = useNavigate();
@@ -44,10 +44,8 @@ const Headers = () => {
       navigate(`/`);
     } else if (type == "movie") {
       navigate(`/explore/movies`);
-    } else if (type == "tv") {
-      navigate(`/explore/tv`);
     } else {
-      navigate(`/search`);
+      navigate(`/explore/tv`);
     }
   };
   return (
@@ -67,10 +65,7 @@ const Headers = () => {
           TV Shows
         </NavUlItems>
       </NavUl>
-      <SearchIcon
-        className="search-bar"
-        onClick={() => handleHeaderNavigation("search")}
-      >
+      <SearchIcon className="search-bar" onClick={() => showSearch(true)}>
         <FaSearch />
       </SearchIcon>
     </NavBar>
