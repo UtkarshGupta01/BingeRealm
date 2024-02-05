@@ -2,20 +2,17 @@ import styled from "styled-components";
 
 const sharedStyle = styled.div`
 color: white;
-font-size: 20px;
+font-size: 30px;
 background-color: rgb(0,0,0);
-padding: 10px 12px 3px;
-border-radius: 30px;
+padding: 40px 20px 30px;
 z-index: 5;
-top: 40%;
+top: 35%;
 transition: all 0.35s;
-opacity: 0.5;
+opacity: 0.3;
 &:hover{
   background-color: rgb(0,0,0);
   opacity: 0.8;
-  padding-bottom: 5px;
   cursor: pointer;
-  transform: scale(1.1);
 }
 `
 
@@ -31,11 +28,21 @@ export const CarousalSection = styled.div`
 
 export const NavArrowLeft = styled(sharedStyle)`
 position: absolute;
-left: 20px;
+left: 0px;
+border-radius: 0 100px 100px 0;
+&:hover{
+  padding-left: 10px;
+  padding-right: 30px;
+}
 `
 export const NavArrowRight = styled(sharedStyle)`
 position: absolute;
-right: 20px;
+right: 0;
+border-radius: 100px 0 0 100px;
+&:hover{
+  padding-left: 30px;
+  padding-right: 10px;
+}
 `
 
 export const CarousalItems = styled.div`

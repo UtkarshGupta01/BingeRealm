@@ -10,13 +10,13 @@ const Trending = () => {
   const { data, loading } = useFetch(`/trending/all/${tab}`);
 
   const onTabChange = (tab) => {
-    setTab(tab === "Day" ? "day" : "week");
+    setTab(tab === "Today" ? "day" : "week");
   };
   return (
     <SectionWrapper>
       <HeadingContainer>
         <Heading>Trending</Heading>
-        <TabSwitch data={["Day", "Week"]} onTabChange={onTabChange} />
+        <TabSwitch data={["Today", "This Week"]} onTabChange={onTabChange} />
       </HeadingContainer>
       <Carousal data={data?.results} loading={loading} />
     </SectionWrapper>

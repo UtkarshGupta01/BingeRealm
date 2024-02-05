@@ -8,7 +8,7 @@ const OngoingTv = () => {
     .toISOString()
     .split("T")[0];
   const { data, loading } = useFetch(
-    `/discover/tv?air_date.gte=${prevMonth}&include_adult=true&include_null_first_air_dates=true&language=en-US&sort_by=vote_count.desc`
+    `/discover/tv?first_air_date.gte=${prevMonth}&include_adult=true&include_null_first_air_dates=true&language=en-US&sort_by=vote_count.desc`
   );
   return (
     <SectionWrapper>

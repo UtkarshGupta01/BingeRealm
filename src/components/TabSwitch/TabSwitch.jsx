@@ -11,7 +11,7 @@ const TabSwitch = ({ data, onTabChange }) => {
   const [position, setPosition] = useState(0);
 
   const activeTab = (tab, index) => {
-    setPosition(index * 80);
+    setPosition(index * 100);
     setTimeout(() => {
       setSelectedTab(index);
     }, 300);

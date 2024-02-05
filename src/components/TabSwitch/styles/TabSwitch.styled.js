@@ -22,7 +22,7 @@ height: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 80px;
+width: 100px;
 color: ${({ $selectedtab, $index }) => ($selectedtab === $index ? "white" : "black")};
 font-size: 16px;
 font-weight: 500;
@@ -33,7 +33,7 @@ transition: color ease 0.3s;
 `
 export const ActiveTab = styled.div`
 height: 35px;
-width: 80px;
+width: 100px;
 border-radius: 5px;
 background-color:#283044;
 position: absolute;
