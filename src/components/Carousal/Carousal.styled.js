@@ -9,6 +9,7 @@ z-index: 5;
 top: 35%;
 transition: all 0.35s;
 opacity: 0.3;
+display: none;
 &:hover{
   background-color: rgb(0,0,0);
   opacity: 0.8;
@@ -24,6 +25,9 @@ export const CarousalSection = styled.div`
   background-color: #1e2433;
   border-radius: 25px;
   box-shadow: inset 0 0 25px 0 black;
+  &:hover ${sharedStyle}{
+    display: block;
+  }
   `;
 
 export const NavArrowLeft = styled(sharedStyle)`
@@ -51,7 +55,7 @@ gap: 30px;
 overflow-y: auto;
 margin-right: -30px;
 margin-left: -30px;
-padding: 10px 20px;
+padding: 12px 50px;
 
 &::-webkit-scrollbar {
   height:0;

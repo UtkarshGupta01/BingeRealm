@@ -6,6 +6,11 @@ export const Card = styled.div`
   height: 300px;
   overflow: hidden;
   position: relative;
+  transition: all 0.2s;
+  &:hover{
+    box-shadow:5px 5px 10px 1px black;
+  }
+
 `;
 
 export const CardImage = styled.img`
