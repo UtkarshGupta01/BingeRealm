@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Headers from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import SearchPage from "./pages/Search/Search";
+import SearchPage from "./components/Search/Search";
 import { fetchData } from "./utils/api";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import Details from "./pages/Details/Details";
+import Explore from "./pages/Explore/Explore";
+import SearchedResult from "./pages/SearchedResults/SearchedResult";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   const [search, setSearch] = useState(false);
@@ -58,8 +62,10 @@ function App() {
       {search ? <SearchPage showSearch={showSearch} /> : ""}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/explore/movie" element={<SearchPage />} />
-        <Route path="/explore/tv" element={<SearchPage />} />
+        <Route path="/:mediaType/:id" element={<Details />} />
+        <Route path="/explore/:mediaType" element={<Explore />} />
+        <Route path="/search/:query" element={<SearchedResult />} />
+        <Route path="/?#@*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>

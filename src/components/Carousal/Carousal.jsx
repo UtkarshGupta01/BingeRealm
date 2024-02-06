@@ -17,6 +17,7 @@ import loadingGif from "/gif/loading.gif";
 const Carousal = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
   const carousalContainer = useRef();
+  const navigate = useNavigate();
   const carousalNavigation = (dir) => {
     const container = carousalContainer.current;
 
@@ -30,11 +31,16 @@ const Carousal = ({ data, loading }) => {
       behaviour: "smooth",
     });
   };
+
+  const navigateDetails = (id) => {
+    navigate(``);
+  };
   return (
     <CarousalSection>
       {!loading ? (
         <CarousalItems ref={carousalContainer}>
           {data?.map((item) => {
+            console.log(item);
             const posterUrl = item.poster_path
               ? url.poster + item.poster_path
               : poster;
@@ -58,6 +64,7 @@ const Carousal = ({ data, loading }) => {
                 ).format("DD MMM, YYYY")}
                 mediaType={mediaType}
                 genres={item.genre_ids}
+                onClick={() => navigateDetails(item.id)}
               />
             );
           })}

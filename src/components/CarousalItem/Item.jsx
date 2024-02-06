@@ -8,7 +8,7 @@ import {
 
 const Item = ({ posterUrl, posterName, posterRelease, mediaType, genres }) => {
   return (
-    <CarousalItem className="carouselItem">
+    <CarousalItem>
       <Cards posterUrl={posterUrl} mediaType={mediaType} movieGenres={genres} />
       <CardMediaInfo>
         <CardMediaName>{posterName}</CardMediaName>
