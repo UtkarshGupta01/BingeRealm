@@ -7,8 +7,10 @@ export const Card = styled.div`
   overflow: hidden;
   position: relative;
   transition: all 0.2s;
+  border: 3px solid transparent;
   &:hover{
     box-shadow:5px 5px 10px 1px black;
+    border-color: white;
   }
 
 `;
