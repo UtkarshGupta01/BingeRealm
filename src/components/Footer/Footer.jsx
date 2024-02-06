@@ -13,8 +13,10 @@ import {
   CopyrightSection,
   CopyrightInfo,
   MadeBy,
+  About,
 } from "./styles/Footer.styled";
 import WatchSection from "./WatchSection/WatchSection";
+import AboutMe from "./About Me/AboutMe";
 import { RiLinkedinFill, RiInstagramLine } from "react-icons/ri";
 import { VscGithub } from "react-icons/vsc";
 import { FaRegCopyright, FaHeart } from "react-icons/fa6";
@@ -23,19 +25,27 @@ import { LuDot } from "react-icons/lu";
 const Footer = () => {
   const [terms, setTerms] = useState(true);
   const [watch, setWatch] = useState(false);
+  const [about, setAbout] = useState(false);
   const termsOfUse =
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit maiores aspernatur quasi amet, molestiae alias nisi qui ea ab sequi ad, vel aliquam mollitia harum modi porro officia culpa magnam?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum suscipit vero, molestiae illum qui magni deleniti dicta aperiam non quae, sit porro, harum ad doloremque fugiat? Esse, perferendis fuga. Quidem!";
   const [content, setContent] = useState(termsOfUse);
 
-  const handleFooterDisplay = (li) => {
-    if (li === "terms") {
+  const handleFooterDisplay = (selected) => {
+    if (selected === "terms") {
       setTerms(true);
       setWatch(false);
+      setAbout(false);
       setContent(termsOfUse);
-    } else {
+    } else if (selected === "watch") {
       setWatch(true);
       setTerms(false);
+      setAbout(false);
       setContent(<WatchSection />);
+    } else {
+      setAbout(true);
+      setWatch(false);
+      setTerms(false);
+      setContent(<AboutMe />);
     }
   };
 
@@ -48,6 +58,9 @@ const Footer = () => {
         <Watch onClick={() => handleFooterDisplay("watch")} $watch={watch}>
           Where to Watch?
         </Watch>
+        <About onClick={() => handleFooterDisplay("about")} $about={about}>
+          About Me
+        </About>
       </FooterList>
       <FooterListContent>{content}</FooterListContent>
       <ContactTitle>- Contact Me -</ContactTitle>

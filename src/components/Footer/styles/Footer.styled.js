@@ -9,9 +9,9 @@ margin-top:150px;
 
 export const FooterList = styled.ul`
 display: flex;
-padding: 40px 1%;
+padding:80px 18% 50px;
 justify-content:space-evenly;
-color: rgb(255,255,255,0.7);
+color: rgb(255,255,255,0.5);
 font-size: 17px;
 
 `
@@ -37,10 +37,16 @@ color:${({ $watch }) => ($watch ? "white" : "none")};
 font-weight:${({ $watch }) => ($watch ? "500" : "unset")};
 `
 
+export const About = styled(sharedListItem)`
+color:${({ $about }) => ($about ? "white" : "none")};
+font-weight:${({ $about }) => ($about ? "500" : "unset")};
+`
+
 export const FooterListContent = styled.div`
 color: white;
-padding: 40px 15%;
+padding: 0 15% 40px;
 height: 120px;
+font-size: 17px;
 
 `
 export const ContactTitle = styled.div`
