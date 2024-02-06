@@ -23,12 +23,12 @@ import { FaRegCopyright, FaHeart } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 
 const Footer = () => {
-  const [terms, setTerms] = useState(true);
-  const [watch, setWatch] = useState(false);
+  const [terms, setTerms] = useState(false);
+  const [watch, setWatch] = useState(true);
   const [about, setAbout] = useState(false);
   const termsOfUse =
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit maiores aspernatur quasi amet, molestiae alias nisi qui ea ab sequi ad, vel aliquam mollitia harum modi porro officia culpa magnam?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum suscipit vero, molestiae illum qui magni deleniti dicta aperiam non quae, sit porro, harum ad doloremque fugiat? Esse, perferendis fuga. Quidem!";
-  const [content, setContent] = useState(termsOfUse);
+  const [content, setContent] = useState(<WatchSection />);
 
   const handleFooterDisplay = (selected) => {
     if (selected === "terms") {
