@@ -62,10 +62,11 @@ function App() {
       {search ? <SearchPage showSearch={showSearch} /> : ""}
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Details />} /> */}
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="/search/:query" element={<SearchedResult />} />
-        <Route path="/?#@*" element={<ErrorPage />} />
+        <Route path="/*?#@" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>

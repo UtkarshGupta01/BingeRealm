@@ -33,7 +33,7 @@ const Upcoming = () => {
         <Heading>Upcoming</Heading>
         <TabSwitch data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </HeadingContainer>
-      <Carousal data={data?.results} loading={loading} />
+      <Carousal data={data?.results} loading={loading} current_media={tab} />
     </SectionWrapper>
   );
 };

@@ -15,7 +15,7 @@ const OngoingTv = () => {
       <HeadingContainer>
         <Heading>Ongoing TV Shows</Heading>
       </HeadingContainer>
-      <Carousal data={data?.results} loading={loading} />
+      <Carousal data={data?.results} loading={loading} current_media="tv" />
     </SectionWrapper>
   );
 };
