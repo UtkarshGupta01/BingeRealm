@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DetailsMain = styled.div`
 color: white;
-margin:  100px 80px;
+margin:  100px 50px 0;
 display: flex;
 padding: 40px;
 background-color: #1e2433;

@@ -45,7 +45,6 @@ const MovieDetails = ({ director, trailerId }) => {
     setShowVideo(true);
     setVideoId(trailerId);
   };
-  console.log(data);
 
   return (
     <>
@@ -113,8 +112,8 @@ const MovieDetails = ({ director, trailerId }) => {
 };
 
 MovieDetails.propTypes = {
-  director: PropTypes.object.isRequired,
-  trailerId: PropTypes.string.isRequired,
+  director: PropTypes.array,
+  trailerId: PropTypes.string,
 };
 
 export default MovieDetails;
