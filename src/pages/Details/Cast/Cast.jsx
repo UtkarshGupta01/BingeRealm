@@ -13,10 +13,9 @@ import {
 
 const Cast = ({ topCast }) => {
   const { url } = useSelector((state) => state.home);
-  console.log(topCast);
   return (
     <SectionWrapper>
-      <Title>Cast</Title>
+      <Title>Top Cast</Title>
       <CastCarousal>
         {topCast?.map((cast) => (
           <Casts key={cast.cast_id}>
@@ -25,7 +24,7 @@ const Cast = ({ topCast }) => {
             </CastProfile>
             <CastInfo>
               <CastName>{cast.name}</CastName>
-              <span style={{ opacity: "0.3" }}>as</span>
+              <span style={{ opacity: "0.3", fontSize: "15px" }}>as</span>
               <CastCharName>{cast.character}</CastCharName>
             </CastInfo>
           </Casts>

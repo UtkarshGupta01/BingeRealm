@@ -16,7 +16,7 @@ const Details = () => {
   const topCast = credits?.cast
     .filter((actor) => actor.known_for_department === "Acting")
     .sort((a, b) => b.popularity - a.popularity)
-    .slice(0, 10);
+    .slice(0, 15);
   const trailerId = videos?.results.filter((t) => t.type === "Trailer")[0].key;
 
   return (

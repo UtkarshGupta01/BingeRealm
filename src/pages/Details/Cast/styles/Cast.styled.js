@@ -42,7 +42,9 @@ color: white;
 font-weight:500;
 `
 export const CastName = styled.div`
+font-size: 18px;
 `
 export const CastCharName = styled.div`
+font-size: 15px;
 opacity: 0.6;
 `
