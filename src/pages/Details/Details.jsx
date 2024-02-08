@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import MovieDetails from "./MovieDetails/MovieDetails";
 import Cast from "./Cast/Cast";
+import VideoClips from "./VideoClips/VideoClips";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -22,7 +23,8 @@ const Details = () => {
   return (
     <>
       <MovieDetails director={director} trailerId={trailerId} />
-      <Cast topCast={topCast}></Cast>;
+      <Cast topCast={topCast}></Cast>
+      <VideoClips videos={videos?.results}></VideoClips>
     </>
   );
 };
