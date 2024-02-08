@@ -68,16 +68,7 @@ margin-top: 10px;
 font-size: 15px;
 font-weight: 400;
 color: #35405A;
-`
-export const Media = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-&:hover ${MediaName}{
-  color: white;
-}
-
+transition: all 0.4s;
 `
 export const MediaIcon = styled.div`
 font-size: 35px;
@@ -87,10 +78,20 @@ border-radius: 50px;
 box-shadow: 0 0 15px 0 black;
 cursor: pointer;
 transition: all 0.4s;
-&:hover{
+`
+export const Media = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+&:hover ${MediaName}{
+  color: white;
+}
+&:hover ${MediaIcon}{
   box-shadow: 0 0 15px 0 white;
   color:white;
 }
+
 `
 export const CopyrightSection = styled.div`
 background-color: #283044;
