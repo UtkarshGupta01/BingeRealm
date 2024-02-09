@@ -26,6 +26,7 @@ import {
   PosterImage,
   YoutubeIcon,
   MediaLength,
+  MediaEpisodeInfo,
 } from "./styles/DetailsBanner.styled";
 
 const DetailsBanner = ({ director, writer, trailerId }) => {
@@ -132,6 +133,23 @@ const DetailsBanner = ({ director, writer, trailerId }) => {
               <span>Status: {data?.status}</span>
               Release Date: {dayjs(data?.first_air_date).format("DD MMM YYYY")}
             </MediaDate>
+          )}
+
+          {mediaType === "tv" && (
+            <MediaEpisodeInfo>
+              Latest Episode :{" "}
+              {dayjs(data?.last_air_date).format("DD MMM YYYY")}
+              {data?.status === "Ended" ? (
+                ""
+              ) : (
+                <span>
+                  Next Episode :{" "}
+                  {dayjs(data?.next_episode_to_air?.air_date).format(
+                    "DD MMM YYYY"
+                  )}
+                </span>
+              )}
+            </MediaEpisodeInfo>
           )}
 
           {/* Overview */}

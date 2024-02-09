@@ -19,13 +19,14 @@ const Details = () => {
   console.log(data);
   console.log(credits);
   console.log(videos);
-  const director = credits?.crew.filter((d) => d.job === "Director");
 
+  const director = credits?.crew.filter((d) => d.job === "Director");
   const writer = credits?.crew.filter((w) => w.job === "Original Concept");
   const topCast = credits?.cast
     .filter((actor) => actor.known_for_department === "Acting")
     .sort((a, b) => b.popularity - a.popularity)
     .slice(0, 15);
+
   let trailerId = "";
   const trailerVideo = videos?.results.find((t) => t.type === "Trailer");
   if (trailerVideo) {
