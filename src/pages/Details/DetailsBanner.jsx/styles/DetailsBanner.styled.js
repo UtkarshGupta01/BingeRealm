@@ -9,13 +9,13 @@ background-color: #1e2433;
 border-radius: 25px;
 box-shadow: inset 0 0 25px 0 black;
 justify-content: flex-start;
-gap: 80px;
+gap: 60px;
 font-weight: 500;
 `
 
 
-export const MoviePoster = styled.div`
-max-width: 350px;
+export const MediaPoster = styled.div`
+max-width: 380px;
 border: 3px solid rgb(255,255,255,0.5);
 border-radius: 20px;
 overflow: hidden;
@@ -23,9 +23,10 @@ overflow: hidden;
 
 export const PosterImage = styled.img`
 width: 100%;
+background-size:fit;
 `
 
-export const MovieTitle = styled.div`
+export const MediaTitle = styled.div`
 font-size: 30px;
 font-weight: 600;
 display: flex;
@@ -33,17 +34,17 @@ align-items: center;
 gap: 10px;
 
 `
-export const MovieYear = styled.span`
+export const MediaYear = styled.span`
 font-size: 25px;
 
 `
-export const MovieTagline = styled.div`
+export const MediaTagline = styled.div`
 font-size: 18px;
 opacity: 0.7;
 margin-top:-5px;
 `
 
-export const MovieGenres = styled.div`
+export const MediaGenres = styled.div`
 display: flex;
 margin-top: 15px;
 gap:10px
@@ -55,32 +56,41 @@ border-radius: 7px;
 `
 
 
-export const MovieDirector = styled.div`
+export const MediaDirector = styled.div`
 margin-top: 10px;
 opacity: 0.6;
 
 
 `
-export const MovieRatings = styled.div`
+
+export const MediaLength = styled.div`
+margin-top: 10px;
+opacity: 0.6;
+display: flex;
+gap: 40px;
+
+`
+
+export const MediaRatings = styled.div`
 margin-top: 10px;
 opacity: 0.6;
 
 `
-export const MovieTime = styled.div`
+export const MediaTime = styled.div`
+margin-top: 10px;
+opacity: 0.6;
+
+`
+
+
+export const MediaDate = styled.div`
 margin-top: 10px;
 display: flex;
 gap: 50px;
 opacity: 0.6;
 
 `
-
-
-export const MovieDate = styled.div`
-margin-top: 10px;
-opacity: 0.6;
-
-`
-export const MovieOverview = styled.div`
+export const MediaOverview = styled.div`
 margin-top: 10px;
 font-size: 20px;
 `
@@ -92,14 +102,14 @@ height: 130px;
 `
 
 
-export const MovieTrailer = styled.div`
-font-size: 30px;
+export const MediaTrailer = styled.div`
+font-size: 20px;
 display: flex;
 align-items: center;
-gap: 20px;
+gap: 10px;
 border: 3px solid transparent;
 border-radius:15px;
-width: 275px;
+width: 21%;
 padding: 10px;
 box-shadow: 0 0 20px 0 black;
 transition: all 0.3s;
@@ -109,14 +119,11 @@ cursor: pointer;
 }
 `
 export const YoutubeIcon = styled.img`
-width: 60px;
-
+width: 50px;
 `
 
-export const MovieHomepage = styled.div`
+export const MediaHomepage = styled.div`
 margin-top: 15px;
-
-
 `
 
 export const HomepageLink = styled.a`
