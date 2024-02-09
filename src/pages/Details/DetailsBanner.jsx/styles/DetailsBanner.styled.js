@@ -103,11 +103,12 @@ font-size: 20px;
 export const OverviewDesciption = styled.div`
 font-size: 15px;
 font-weight: 400;
-height: 130px;
+/* height: 170px; */
 `
 
 
 export const MediaTrailer = styled.div`
+margin-top: 20px;
 font-size: 20px;
 display: flex;
 align-items: center;
