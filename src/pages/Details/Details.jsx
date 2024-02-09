@@ -3,6 +3,8 @@ import useFetch from "../../hooks/useFetch";
 import MovieDetails from "./MovieDetails/MovieDetails";
 import Cast from "./Cast/Cast";
 import VideoClips from "./VideoClips/VideoClips";
+import Similars from "./Carousals/Similars";
+import Recommendations from "./Carousals/Recommendations";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -25,6 +27,8 @@ const Details = () => {
       <MovieDetails director={director} trailerId={trailerId} />
       <Cast topCast={topCast}></Cast>
       <VideoClips videos={videos?.results}></VideoClips>
+      <Similars mediaType={mediaType} id={id}></Similars>
+      <Recommendations mediaType={mediaType} id={id}></Recommendations>
     </>
   );
 };

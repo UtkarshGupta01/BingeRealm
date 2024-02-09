@@ -38,7 +38,7 @@ const VideoClips = ({ videos }) => {
               </VideoThumbnail>
               <VideosName>
                 {video.name}{" "}
-                <span style={{ fontSize: "15px" }}>({video.type})</span>
+                <div style={{ fontSize: "15px" }}>({video.type})</div>
               </VideosName>
             </Video>
           ))}
