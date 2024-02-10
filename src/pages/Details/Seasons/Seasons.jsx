@@ -5,6 +5,7 @@ import {
   SeasonHeading,
   SeasonNumber,
   SeasonOption,
+  SeasonEpisodes,
   SeasonOverview,
   SeasonSection,
   SeasonTitle,
@@ -18,6 +19,7 @@ const Seasons = () => {
   const [seasonTitle, setSeasonTitle] = useState("");
   const [seasonDate, setSeasonDate] = useState("");
   const [seasonOverview, setSeasonOverview] = useState("");
+  const [seasonEpisodes, setSeasonEpisodes] = useState("");
 
   const handleSeason = (event) => {
     const seasonNumber = event.target.value;
@@ -28,6 +30,7 @@ const Seasons = () => {
     setSeasonTitle(season?.name);
     setSeasonDate(season.air_date);
     setSeasonOverview(season?.overview);
+    setSeasonEpisodes(season?.episode_count);
   };
 
   return (
@@ -51,6 +54,12 @@ const Seasons = () => {
             </span>
           </SeasonTitle>
         </SeasonHeading>
+        <SeasonEpisodes>
+          Total Episodes :
+          {seasonEpisodes === "" || seasonEpisodes === null
+            ? ""
+            : seasonEpisodes}
+        </SeasonEpisodes>
         <SeasonOverview>
           {seasonOverview === "" ? "No Overview Available" : seasonOverview}
         </SeasonOverview>
