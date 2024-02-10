@@ -5,6 +5,7 @@ import VideoClips from "./VideoClips/VideoClips";
 import Similars from "./Carousals/Similars";
 import Recommendations from "./Carousals/Recommendations";
 import DetailsBanner from "./DetailsBanner.jsx/DetailsBanner";
+import Seasons from "./Seasons/Seasons";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -42,6 +43,7 @@ const Details = () => {
         writer={writer}
         trailerId={trailerId}
       ></DetailsBanner>
+      {mediaType === "tv" && <Seasons></Seasons>}
       <Cast topCast={topCast}></Cast>
       <VideoClips videos={videos?.results}></VideoClips>
       <Similars mediaType={mediaType} id={id}></Similars>
