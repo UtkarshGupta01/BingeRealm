@@ -28,6 +28,7 @@ import {
   MediaLength,
   MediaEpisodeInfo,
 } from "./styles/DetailsBanner.styled";
+import poster from "/images/Poster.png";
 
 const DetailsBanner = ({ director, writer, trailerId }) => {
   const { mediaType, id } = useParams();
@@ -48,13 +49,17 @@ const DetailsBanner = ({ director, writer, trailerId }) => {
     setVideoId(trailerId);
   };
 
+  const posterUrl = data?.poster_path
+    ? url?.poster + data?.poster_path
+    : poster;
+
   return (
     <>
       {/* Main Details Section */}
       <DetailsMain>
         {/* Poster */}
         <MediaPoster>
-          <PosterImage src={url?.poster + data?.poster_path} />
+          <PosterImage src={posterUrl} />
         </MediaPoster>
 
         {/*  Media Details*/}

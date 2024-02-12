@@ -6,6 +6,8 @@ import Similars from "./Carousals/Similars";
 import Recommendations from "./Carousals/Recommendations";
 import DetailsBanner from "./DetailsBanner.jsx/DetailsBanner";
 import Seasons from "./Seasons/Seasons";
+import loadingGif from "/gif/loading.gif";
+import { LoadingGif, Loading } from "./styles/Details.styled";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -38,16 +40,25 @@ const Details = () => {
 
   return (
     <>
-      <DetailsBanner
-        director={director}
-        writer={writer}
-        trailerId={trailerId}
-      ></DetailsBanner>
-      {mediaType === "tv" && <Seasons></Seasons>}
-      <Cast topCast={topCast}></Cast>
-      <VideoClips videos={videos?.results}></VideoClips>
-      <Similars mediaType={mediaType} id={id}></Similars>
-      <Recommendations mediaType={mediaType} id={id}></Recommendations>
+      {!loading ? (
+        <>
+          <DetailsBanner
+            director={director}
+            writer={writer}
+            trailerId={trailerId}
+          ></DetailsBanner>
+          {mediaType === "tv" && <Seasons></Seasons>}
+          <Cast topCast={topCast}></Cast>
+          <VideoClips videos={videos?.results}></VideoClips>
+          <Similars mediaType={mediaType} id={id}></Similars>
+          <Recommendations mediaType={mediaType} id={id}></Recommendations>
+        </>
+      ) : (
+        <Loading>
+          <LoadingGif src={loadingGif}></LoadingGif>
+          Fetching Data...
+        </Loading>
+      )}
     </>
   );
 };

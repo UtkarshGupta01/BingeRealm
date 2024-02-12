@@ -27,7 +27,7 @@ position: absolute;
 border-radius:8px;
 top: 0;
 background-color: rgb(0,0,0,0.5);
-padding: 17.4% 42.3%;
+padding: 17.7% 42.8%;
 margin: 0.8%;
 display: none;
 transition: all 0.4s;
@@ -36,6 +36,7 @@ export const Video = styled.div`
 border-radius: 10px;
 transition:all 0.4s;
 cursor: pointer;
+max-width: 320px;
 &:hover{
   transform: scale(1.1);
 }
