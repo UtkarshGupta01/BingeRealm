@@ -5,7 +5,6 @@ import useFetch from "../../../hooks/useFetch";
 
 const Recommendations = ({ mediaType, id }) => {
   const { data, loading } = useFetch(`/${mediaType}/${id}/recommendations`);
-  console.log(data);
 
   return (
     <SectionWrapper>

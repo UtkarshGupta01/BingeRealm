@@ -32,7 +32,6 @@ const Seasons = () => {
       const season = data?.seasons.find(
         (season) => season.season_number == seasonNumber
       );
-      console.log(season);
       setSeasonTitle(season?.name);
       setSeasonDate(season.air_date);
       setSeasonOverview(season?.overview);

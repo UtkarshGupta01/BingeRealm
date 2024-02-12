@@ -18,10 +18,7 @@ const Details = () => {
     `/${mediaType}/${id}/credits`
   );
 
-  const { data, loading } = useFetch(`/${mediaType}/${id}`);
-  console.log(data);
-  console.log(credits);
-  console.log(videos);
+  const { loading } = useFetch(`/${mediaType}/${id}`);
 
   const director = credits?.crew.filter((d) => d.job === "Director");
   const writer = credits?.crew.filter((w) => w.job === "Original Concept");
