@@ -10,7 +10,11 @@ const Similars = ({ mediaType, id }) => {
       <Title>
         {mediaType === "movie" ? "Similiar Movies" : "Similar TV Shows"}
       </Title>
-      <Carousal data={data?.results} loading={loading}></Carousal>
+      <Carousal
+        data={data?.results}
+        loading={loading}
+        current_media={mediaType}
+      ></Carousal>
     </SectionWrapper>
   );
 };
