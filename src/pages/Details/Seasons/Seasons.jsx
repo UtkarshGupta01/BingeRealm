@@ -23,14 +23,21 @@ const Seasons = () => {
 
   const handleSeason = (event) => {
     const seasonNumber = event.target.value;
-    const season = data?.seasons.find(
-      (season) => season.season_number == seasonNumber
-    );
-    console.log(season);
-    setSeasonTitle(season?.name);
-    setSeasonDate(season.air_date);
-    setSeasonOverview(season?.overview);
-    setSeasonEpisodes(season?.episode_count);
+    if (event.target.value === "None") {
+      setSeasonTitle("");
+      setSeasonDate("");
+      setSeasonOverview("");
+      setSeasonEpisodes("");
+    } else {
+      const season = data?.seasons.find(
+        (season) => season.season_number == seasonNumber
+      );
+      console.log(season);
+      setSeasonTitle(season?.name);
+      setSeasonDate(season.air_date);
+      setSeasonOverview(season?.overview);
+      setSeasonEpisodes(`Total Episodes : ${season?.episode_count}`);
+    }
   };
 
   return (
@@ -38,7 +45,7 @@ const Seasons = () => {
       <SeasonSection>
         <SeasonHeading>
           <SeasonNumber onChange={handleSeason}>
-            <SeasonOption>Select Season</SeasonOption>
+            <SeasonOption value="None">Select Season</SeasonOption>
             {data?.seasons.map((season) => (
               <SeasonOption key={season.id} value={season.season_number}>
                 Season {season.season_number}
@@ -55,7 +62,6 @@ const Seasons = () => {
           </SeasonTitle>
         </SeasonHeading>
         <SeasonEpisodes>
-          Total Episodes :
           {seasonEpisodes === "" || seasonEpisodes === null
             ? ""
             : seasonEpisodes}
