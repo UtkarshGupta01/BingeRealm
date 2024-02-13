@@ -4,6 +4,11 @@ export const WatchPlatforms = styled.div`
 display: flex;
 justify-content: center;
 gap: 20px;
+flex-wrap: wrap;
+
+@media only screen and (max-width: 450px) {
+  gap: 5px;
+}
 `
 
 export const PlatformName = styled.div`
@@ -12,6 +17,10 @@ font-size: 15px;
 font-weight: 400;
 color: #35405A;
 transition: all 0.4s;
+
+@media only screen and (max-width: 450px) {
+  font-size: 14px;
+}
 `
 
 export const PlatformIcon = styled.img`
@@ -21,6 +30,16 @@ border: 3px solid transparent;
 border-radius: 20px;
 padding: 10px;
 transition: all 0.4s;
+@media only screen and (max-width: 1056px) {
+  width: 55%;
+  border-radius: 15px;
+  
+}
+@media only screen and (max-width: 450px) {
+  width: 48%;
+  border-radius: 15px;
+  padding: 10px;
+}
 `
 export const Platform = styled.div`
 display: flex;

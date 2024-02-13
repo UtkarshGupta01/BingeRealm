@@ -37,8 +37,10 @@ export const CarousalSection = styled.div`
   }
   @media only screen and (max-width: 1056px) {
     padding: 15px;
+    border-radius: 20px;
   }
   @media only screen and (max-width: 450px) {
+    border-radius: 15px;
     padding: 10px;
 }
   `;
