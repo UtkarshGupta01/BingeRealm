@@ -1,7 +1,7 @@
 import SectionWrapper from "../../../components/SectionWrapper/SectionWrapper";
-import { Heading, HeadingContainer } from "./styles/OngoingTv.styled";
 import Carousal from "../../../components/Carousal/Carousal";
 import useFetch from "../../../hooks/useFetch";
+import { Heading, HeadingContainer } from "../Trending/styles/Trending.styled";
 
 const OngoingTv = () => {
   const prevMonth = new Date(new Date().setMonth(new Date().getMonth() - 1))

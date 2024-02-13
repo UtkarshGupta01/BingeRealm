@@ -1,9 +1,9 @@
 import SectionWrapper from "../../../components/SectionWrapper/SectionWrapper";
-import { Heading, HeadingContainer } from "./styles/Popular.styled";
 import Carousal from "../../../components/Carousal/Carousal";
 import TabSwitch from "../../../components/TabSwitch/TabSwitch";
 import { useState } from "react";
 import useFetch from "../../../hooks/useFetch";
+import { Heading, HeadingContainer } from "../Trending/styles/Trending.styled";
 
 const Popular = () => {
   const [tab, setTab] = useState("movie");

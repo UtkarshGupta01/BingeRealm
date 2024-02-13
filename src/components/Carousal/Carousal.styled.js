@@ -15,12 +15,19 @@ display: none;
   opacity: 0.8;
   cursor: pointer;
 }
+  @media only screen and (max-width: 1056px) {
+    font-size: 25px;
+padding: 30px 18px 20px;
+}
+@media only screen and (max-width: 450px) {
+    font-size: 20px;
+    padding: 20px 16px 13px;
+}
 `
 
 export const CarousalSection = styled.div`
   margin: 20px 0;
   padding: 30px;
-  min-height: 342px;
   position:relative ;
   background-color: #1e2433;
   border-radius: 25px;
@@ -28,6 +35,12 @@ export const CarousalSection = styled.div`
   &:hover ${sharedStyle}{
     display: block;
   }
+  @media only screen and (max-width: 1056px) {
+    padding: 15px;
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 10px;
+}
   `;
 
 export const NavArrowLeft = styled(sharedStyle)`
@@ -37,6 +50,15 @@ border-radius: 0 100px 100px 0;
 &:hover{
   padding-left: 10px;
   padding-right: 30px;
+  @media only screen and (max-width: 1056px) {
+    padding-left: 9px;
+    padding-right: 27px;
+  }
+  @media only screen and (max-width: 450px) {
+    padding-left: 8px;
+    padding-right: 24px;
+    
+}
 }
 `
 export const NavArrowRight = styled(sharedStyle)`
@@ -46,6 +68,15 @@ border-radius: 100px 0 0 100px;
 &:hover{
   padding-left: 30px;
   padding-right: 10px;
+  @media only screen and (max-width: 1056px) {
+    padding-left: 27px;
+    padding-right: 9px;
+  }
+  @media only screen and (max-width: 450px) {
+    padding-left: 24px;
+    padding-right: 8px;
+    
+}
 }
 `
 
@@ -63,6 +94,17 @@ padding: 12px 50px;
 &::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+@media only screen and (max-width: 1056px) {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 10px 30px;
+  }
+  @media only screen and (max-width: 550px) {
+    margin-right: -10px;
+  margin-left: -10px;
+  padding: 9px 20px;
+  gap: 15px;
+}
 `
 
 export const LoadingGif = styled.img`
@@ -70,7 +112,6 @@ export const LoadingGif = styled.img`
 width: 6%;
 background-color: #272D3F;
 margin: 20px 23px;
-    padding: 108px 47px;
+padding: 108px 47px;
 border-radius: 15px;
-
 `

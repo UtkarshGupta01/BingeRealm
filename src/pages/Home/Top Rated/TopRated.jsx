@@ -1,5 +1,5 @@
 import SectionWrapper from "../../../components/SectionWrapper/SectionWrapper";
-import { Heading, HeadingContainer } from "./styles/TopRated.styled";
+import { Heading, HeadingContainer } from "../Trending/styles/Trending.styled";
 import Carousal from "../../../components/Carousal/Carousal";
 import TabSwitch from "../../../components/TabSwitch/TabSwitch";
 import { useState } from "react";

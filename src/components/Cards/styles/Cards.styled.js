@@ -12,6 +12,13 @@ export const Card = styled.div`
     box-shadow:5px 5px 10px 1px black;
     border-color: white;
   }
+  @media only screen and (max-width: 1056px) {
+    height: 280px;
+  }
+  @media only screen and (max-width: 450px) {
+    height: 200px;
+    
+}
 
 `;
 
