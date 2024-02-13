@@ -21,15 +21,15 @@ export const HeroImg = styled.img`
 
 export const MergeLayer = styled.div`
   width: 100%;
-height: 100px;
-background: linear-gradient(
-    180deg,
-    rgba(4, 90, 95, 0) 0%,
-    #283044 80.17%
-);
-position: absolute;
-bottom: 0;
-left: 0;
+  height: 100px;
+  background: linear-gradient(
+      180deg,
+      rgba(4, 90, 95, 0) 0%,
+      #283044 80.17%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;
 
 export const WelcomeArea = styled.div`
