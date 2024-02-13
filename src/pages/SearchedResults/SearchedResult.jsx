@@ -11,6 +11,7 @@ import {
   SearchFor,
   Spinner,
   MediaSection,
+  NotFound,
 } from "./styles/SearchedResult.styled";
 import spinner from "/gif/spinner.gif";
 import { useSelector } from "react-redux";
@@ -99,7 +100,7 @@ const SearchedResult = () => {
               </MediaSection>
             </InfiniteScroll>
           ) : (
-            <span>Sorry, Results not Found</span>
+            <NotFound>Sorry, results not found :(</NotFound>
           )}
         </div>
       )}

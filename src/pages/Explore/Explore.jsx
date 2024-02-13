@@ -15,6 +15,7 @@ import {
   Filters,
   MediaSection,
   Spinner,
+  NotFound,
 } from "./styles/Explore.styled";
 import "./styles/Explore.css";
 
@@ -182,7 +183,7 @@ const Explore = () => {
               </MediaSection>
             </InfiniteScroll>
           ) : (
-            <div>Sorry, Results not found!</div>
+            <NotFound>Sorry, results not found :(</NotFound>
           )}
         </>
       )}

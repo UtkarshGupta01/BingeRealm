@@ -13,7 +13,6 @@ padding:80px 18% 50px;
 justify-content:space-evenly;
 color: rgb(255,255,255,0.5);
 font-size: 17px;
-
 `
 
 export const sharedListItem = styled.li`
@@ -23,13 +22,11 @@ cursor: pointer;
 &:hover{
   color: white;
 }
-
 `
 
 export const Terms = styled(sharedListItem)`
 color:${({ $terms }) => ($terms ? "white" : "none")};
 font-weight:${({ $terms }) => ($terms ? "500" : "unset")};
-
 `
 
 export const Watch = styled(sharedListItem)`

@@ -45,6 +45,5 @@ export const NavUlItems = styled.a`
   transition: all 0.3s ease;
   &:hover {
     color: #cc0000;
-    text-shadow: 2px 2px 25px #cc000094;
   }
 `;
