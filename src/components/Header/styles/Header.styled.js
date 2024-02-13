@@ -17,6 +17,10 @@ export const NavBar = styled.nav`
   transform: ${({ $setnavbar }) => ($setnavbar === "hide" ? "translateY(-80px)" : "none")};
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(3.5px);
+  @media only screen and (max-width: 1056px) {
+    font-size: 18px;
+}
+
 `;
 
 export const SearchIcon = styled.div`
@@ -30,12 +34,19 @@ export const SearchIcon = styled.div`
 export const Logo = styled.img`
   width: 90%;
   cursor: pointer;
+  @media only screen and (max-width: 1056px) {
+  width: 80%;
+    
+}
 `;
 
 export const NavUl = styled.ul`
   display: flex;
   list-style: none;
   gap: 70px;
+  @media only screen and (max-width: 1056px) {
+    gap: 40px;
+}
 `;
 
 export const NavUlItems = styled.a`
