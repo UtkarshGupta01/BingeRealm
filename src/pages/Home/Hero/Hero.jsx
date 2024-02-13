@@ -1,24 +1,43 @@
-// import heroDemo from "/gif/hero_demo.mp4";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   HeroContainer,
-  HeroVid,
   Welcome,
   WelcomeArea,
   WelcomeMsg,
   SearchArea,
   SearchBar,
   SearchIcon,
+  HeroImg,
+  MergeLayer,
 } from "./styles/Hero.styled";
 import { FaSearch } from "react-icons/fa";
-// import useFetch from "../../../hooks/useFetch";
+import useFetch from "../../../hooks/useFetch";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
+  const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const { url } = useSelector((state) => state.home);
+  const currentDate = new Date().toISOString().split("T")[0];
+  const futureDate = new Date(
+    new Date().setFullYear(new Date().getFullYear() + 2)
+  )
+    .toISOString()
+    .split("T")[0];
 
-  // const { data, loading } = useFetch("/movie/upcoming");
+  const { data, loading } = useFetch(
+    `/discover/movie?primary_release_date.gte=${currentDate}&primary_release_date.lte=${futureDate}&language=en-US&sort_by=popularity.desc&page=1`
+  );
+  console.log(background);
+
+  useEffect(() => {
+    const bg =
+      url.backdrop +
+      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+    setBackground(bg);
+  }, [data]);
 
   const handleSearchData = () => {
     if (query.length > 0) {
@@ -34,7 +53,7 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      {/* <HeroVid src={heroDemo} autoPlay loop muted /> */}
+      <HeroImg src={background} />
       <WelcomeArea>
         <Welcome>
           Welcome to Binge<font color="red">Verse</font>
@@ -55,6 +74,7 @@ const Hero = () => {
           </SearchIcon>
         </SearchArea>
       </WelcomeArea>
+      <MergeLayer />
     </HeroContainer>
   );
 };

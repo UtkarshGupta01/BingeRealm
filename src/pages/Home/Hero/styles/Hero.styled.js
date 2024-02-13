@@ -9,18 +9,32 @@ export const HeroContainer = styled.div`
   overflow: hidden;
   width: 100%;
   height: 660px;
+  position: relative;
 `;
 
-export const HeroVid = styled.video`
+export const HeroImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.5;
+`;
+
+export const MergeLayer = styled.div`
+  width: 100%;
+height: 100px;
+background: linear-gradient(
+    180deg,
+    rgba(4, 90, 95, 0) 0%,
+    #283044 80.17%
+);
+position: absolute;
+bottom: 0;
+left: 0;
 `;
 
 export const WelcomeArea = styled.div`
   position: absolute;
-  top: 65%;
+  top: 500px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
