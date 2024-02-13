@@ -20,9 +20,15 @@ const Hero = () => {
 
   // const { data, loading } = useFetch("/movie/upcoming");
 
-  const handleSearchData = (event) => {
-    if (event.key == "Enter" && query.length > 0) {
+  const handleSearchData = () => {
+    if (query.length > 0) {
       navigate(`/search/${query}`);
+    }
+  };
+
+  const handleKeyUp = (event) => {
+    if (event.key === "Enter") {
+      handleSearchData();
     }
   };
 
@@ -42,9 +48,9 @@ const Hero = () => {
             type="text"
             placeholder="Search..."
             onChange={(e) => setQuery(e.target.value)}
-            onKeyUp={handleSearchData}
+            onKeyUp={handleKeyUp}
           />
-          <SearchIcon>
+          <SearchIcon onClick={handleSearchData}>
             <FaSearch />
           </SearchIcon>
         </SearchArea>

@@ -14,7 +14,8 @@ font-weight: 500;
 `
 
 export const MediaPoster = styled.div`
-max-width: 380px;
+min-width: 380px;
+max-width: 400px;
 `
 
 export const PosterImage = styled.img`
