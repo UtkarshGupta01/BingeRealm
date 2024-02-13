@@ -43,7 +43,7 @@ const Headers = ({ showSearch }) => {
     if (type == "home") {
       navigate(`/`);
     } else if (type == "movie") {
-      navigate(`/explore/movies`);
+      navigate(`/explore/movie`);
     } else {
       navigate(`/explore/tv`);
     }

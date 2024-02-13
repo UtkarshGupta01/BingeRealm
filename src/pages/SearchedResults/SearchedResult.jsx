@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { fetchData } from "../../utils/api";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Item from "../../components/CarousalItem/Item";
-import Cards from "../../components/Cards/Cards";
 import dayjs from "dayjs";
 import poster from "/images/Poster.png";
 
