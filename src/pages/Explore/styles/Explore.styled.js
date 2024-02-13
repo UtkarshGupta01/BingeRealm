@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-export const ExploreHeader = styled.div`
-
-`
-
-export const Filters = styled.div`
-
-`
 export const ExploreTitle = styled.div`
-padding: 40px 0;
+padding: 30px 0;
 font-size: 25px;
 font-weight: 500;
 color: white;
+`
+
+export const Filters = styled.div`
+display: flex;
+gap: 30px;
+margin-bottom: 30px;
+
 `
 
 export const Spinner = styled.img`

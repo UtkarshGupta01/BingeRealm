@@ -11,26 +11,27 @@ import poster from "/images/Poster.png";
 import spinner from "/gif/spinner.gif";
 import { useSelector } from "react-redux";
 import {
-  ExploreHeader,
   ExploreTitle,
   Filters,
   MediaSection,
   Spinner,
 } from "./styles/Explore.styled";
+import "./styles/Explore.css";
 
 let filters = {};
 
 const sortbyData = [
-  { value: "popularity.desc", label: "Popularity Descending" },
-  { value: "popularity.asc", label: "Popularity Ascending" },
-  { value: "vote_average.desc", label: "Rating Descending" },
-  { value: "vote_average.asc", label: "Rating Ascending" },
+  { value: "popularity.asc", label: "Popularity - Ascending" },
+  { value: "popularity.desc", label: "Popularity - Descending" },
+  { value: "vote_average.asc", label: "Rating - Ascending" },
+  { value: "vote_average.desc", label: "Rating - Descending" },
+  { value: "primary_release_date.asc", label: "Release Date - Ascending" },
   {
     value: "primary_release_date.desc",
-    label: "Release Date Descending",
+    label: "Release Date - Descending",
   },
-  { value: "primary_release_date.asc", label: "Release Date Ascending" },
   { value: "original_title.asc", label: "Title (A-Z)" },
+  { value: "original_title.desc", label: "Title (Z-A)" },
 ];
 
 const Explore = () => {
@@ -106,36 +107,34 @@ const Explore = () => {
 
   return (
     <SectionWrapper>
-      <ExploreHeader>
-        <ExploreTitle>
-          {mediaType === "tv" ? "Explore TV Shows" : "Explore Movies"}
-        </ExploreTitle>
-        <Filters>
-          <Select
-            isMulti
-            name="genres"
-            value={genre}
-            closeMenuOnSelect={false}
-            options={genresData?.genres}
-            getOptionLabel={(option) => option.name}
-            getOptionValue={(option) => option.id}
-            onChange={onChange}
-            placeholder="Select genres"
-            className="react-select-container genresDD"
-            classNamePrefix="react-select"
-          />
-          <Select
-            name="sortby"
-            value={sortby}
-            options={sortbyData}
-            onChange={onChange}
-            isClearable={true}
-            placeholder="Sort by"
-            className="react-select-container sortbyDD"
-            classNamePrefix="react-select"
-          />
-        </Filters>
-      </ExploreHeader>
+      <ExploreTitle>
+        {mediaType === "tv" ? "Explore TV Shows" : "Explore Movies"}
+      </ExploreTitle>
+      <Filters>
+        <Select
+          isMulti
+          name="genres"
+          value={genre}
+          closeMenuOnSelect={false}
+          options={genresData?.genres}
+          getOptionLabel={(option) => option.name}
+          getOptionValue={(option) => option.id}
+          onChange={onChange}
+          placeholder="Select Genres"
+          className="react-select-container genres"
+          classNamePrefix="react-select"
+        />
+        <Select
+          name="sortby"
+          value={sortby}
+          options={sortbyData}
+          onChange={onChange}
+          isClearable={true}
+          placeholder="Sort by"
+          className="react-select-container sort"
+          classNamePrefix="react-select"
+        />
+      </Filters>
       {loading && <Spinner src={spinner} />}
       {!loading && (
         <>

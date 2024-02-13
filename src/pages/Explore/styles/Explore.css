@@ -1,0 +1,69 @@
+/* Outermost Container */
+.react-select-container .react-select__control {
+  background-color: #1e2433;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px black;
+  font-weight: 600;
+  padding: 5px 1px;
+}
+
+/* For Genres */
+.genres {
+  width: 100%;
+}
+
+/* For Sort */
+.sort {
+  width: 100%;
+}
+
+/* For Selected Single Items */
+.react-select-container .react-select__single-value {
+  color: white;
+}
+.react-select-container .react-select__multi-value {
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Selected Items inner styles */
+.react-select-container
+  .react-select__multi-value
+  .react-select__multi-value__remove {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+/* Selected Items container */
+.react-select-container .react-select__value-container {
+  gap: 10px;
+}
+
+/* Select Input */
+.react-select-container
+  .react-select__value-container
+  .react-select__input-container {
+  color: white;
+}
+
+/* Options Styling */
+.react-select-container .react-select__option {
+  font-weight: 700;
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* Selected Options */
+.react-select-container .react-select__option--is-selected {
+  background-color: #35405a;
+  color: white;
+}
+
+/* Hovered Options */
+.react-select-container .react-select__option--is-focused {
+  background-color: #35405ace;
+  color: white;
+}
