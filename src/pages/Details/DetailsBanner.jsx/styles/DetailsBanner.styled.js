@@ -104,7 +104,6 @@ font-size: 20px;
 export const OverviewDesciption = styled.div`
 font-size: 15px;
 font-weight: 400;
-/* height: 170px; */
 `
 
 

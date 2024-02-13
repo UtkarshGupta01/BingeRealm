@@ -30,7 +30,6 @@ const Hero = () => {
   const { data, loading } = useFetch(
     `/discover/movie?primary_release_date.gte=${currentDate}&primary_release_date.lte=${futureDate}&language=en-US&sort_by=popularity.desc&page=1`
   );
-  console.log(background);
 
   useEffect(() => {
     const bg =

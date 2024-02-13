@@ -59,7 +59,6 @@ const SearchedResult = () => {
       {loading && <Spinner src={spinner} />}
       {!loading && (
         <div>
-          {console.log(data?.results)}
           {data?.results.length > 0 ? (
             <InfiniteScroll
               dataLength={data?.results.length || []}
