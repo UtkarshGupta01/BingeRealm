@@ -5,10 +5,10 @@ export const Heading = styled.div`
   font-size: 25px;
   font-weight: 600;
   @media only screen and (max-width: 1056px) {
-    font-size: 20px;
+    font-size: 23px;
 }
   @media only screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 20px;
 }
 `;
 
@@ -20,7 +20,7 @@ gap: 40px;
   gap: 30px;
 }
 @media only screen and (max-width: 600px) {
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
 }
 

@@ -10,6 +10,11 @@ width: 60%;
 height: 70%;
 top: 10%;
 left: 20%;
+@media only screen and (max-width: 1056px) {
+  width: 80%;
+  height: 50%;
+  left: 10%;
+}
 `
 export const VideoOpacityLayer = styled.div`
  background-color: black;
@@ -28,6 +33,14 @@ font-size: 40px;
 color: white;
 z-index: 9;
 cursor: pointer;
+@media only screen and (max-width: 1056px) {
+  font-size: 35px;
+}
+
+@media only screen and (max-width: 425px) {
+  font-size: 20px;
+}
+
 `
 
 export const Video = styled.div`

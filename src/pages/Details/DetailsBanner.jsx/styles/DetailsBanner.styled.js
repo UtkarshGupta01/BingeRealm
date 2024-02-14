@@ -16,8 +16,11 @@ font-weight: 500;
   margin:  100px 5px 0;
   gap: 40px;
   padding: 20px;
+}
+@media only screen and (max-width: 425px) {
+    margin:  70px 5px 0;
 
-  }
+}
 `
 
 export const MediaPoster = styled.div`
@@ -198,7 +201,7 @@ font-weight: 400;
   font-size: 14px;
   }
   @media only screen and (max-width: 425px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `
 
