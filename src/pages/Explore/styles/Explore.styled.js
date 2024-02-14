@@ -40,11 +40,14 @@ column-gap: 20px;
 row-gap: 20px;
 @media only screen and (max-width: 1056px) {
   grid-template-columns: repeat(auto-fill,minmax(165px, 1fr));
-  margin: 5px;
   
 }
 @media only screen and (max-width: 600px) {
   grid-template-columns: repeat(auto-fill,minmax(120px, 1fr));
+  margin: 1px;
+}
+@media only screen and (max-width: 320px) {
+  column-gap: 5px;
 }
 `
 

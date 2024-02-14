@@ -7,6 +7,9 @@ flex-shrink: 0;
 transition: all 0.35s;
 &:hover{
   transform: scale(1.05);
+  @media only screen and (max-width: 425px) {
+    transform : none;
+}
 }
 @media only screen and (max-width: 1056px) {
   width: 180px;

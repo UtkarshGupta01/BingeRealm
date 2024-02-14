@@ -36,6 +36,10 @@ export const CardMedia = styled.div`
   position: absolute;
   top:0;
   right: 0;
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  
+}
 `;
 
 export const CardGenres = styled.div`
@@ -52,4 +56,8 @@ export const CardGenres = styled.div`
   position: absolute;
   bottom:0;
   right: 0;
+  @media only screen and (max-width: 600px) {
+    font-size: 10px;
+  
+  }
   `;
