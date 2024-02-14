@@ -9,8 +9,9 @@ import {
   NavArrowLeft,
   NavArrowRight,
   CarousalItems,
+  Loading,
   LoadingGif,
-} from "./Carousal.styled";
+} from "./styles/Carousal.styled";
 import poster from "/images/Poster.png";
 import loadingGif from "/gif/loading.gif";
 
@@ -68,14 +69,14 @@ const Carousal = ({ data, loading, current_media }) => {
           })}
         </CarousalItems>
       ) : (
-        <>
+        <Loading>
           <LoadingGif src={loadingGif} alt="" />
           <LoadingGif src={loadingGif} alt="" />
           <LoadingGif src={loadingGif} alt="" />
           <LoadingGif src={loadingGif} alt="" />
           <LoadingGif src={loadingGif} alt="" />
           <LoadingGif src={loadingGif} alt="" />
-        </>
+        </Loading>
       )}
       <NavArrowLeft onClick={() => carousalNavigation("left")}>
         <FaArrowLeft />

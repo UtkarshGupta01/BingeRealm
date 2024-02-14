@@ -64,7 +64,14 @@ export const Video = styled.div`
 border-radius: 10px;
 transition:all 0.4s;
 cursor: pointer;
-max-width: 320px;
+width: 320px;
+@media only screen and (max-width: 1056px) {
+  width: 255px;
+}
+@media only screen and (max-width: 425px) {
+  width: 185px;
+}
+
 &:hover{
   transform: scale(1.1);
   @media only screen and (max-width: 425px) {

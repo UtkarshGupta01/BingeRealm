@@ -109,11 +109,30 @@ padding: 12px 50px;
 }
 `
 
-export const LoadingGif = styled.img`
+export const Loading = styled.div`
+display: flex;
+overflow-y: auto;
+padding: 12px 23px;
+gap: 30px;
+&::-webkit-scrollbar {
+  height:0;
+}
+&::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+`
 
-width: 6%;
+export const LoadingGif = styled.img`
 background-color: #272D3F;
-margin: 20px 23px;
+width: 78px;
 padding: 108px 47px;
 border-radius: 15px;
+@media only screen and (max-width: 1056px) {
+  width: 68px;
+  padding: 95px 40px;
+}
+@media only screen and (max-width: 600px) {
+  width: 50px;
+  padding: 80px 35px;
+}
 `
