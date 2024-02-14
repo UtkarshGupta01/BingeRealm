@@ -80,7 +80,7 @@ justify-content: center;
 gap: 50px;
 padding: 50px 20px;
 @media only screen and (max-width: 600px) {
-  gap: 40px;
+  gap: 20px;
   padding: 30px 10px;
 }
 `
@@ -135,6 +135,10 @@ gap: 10px;
 @media only screen and (max-width: 600px) {
   font-size: 14px;
   padding: 10px 0;
+}
+@media only screen and (max-width: 425px) {
+  flex-direction: column;
+  gap: 0;
 }
   
 `

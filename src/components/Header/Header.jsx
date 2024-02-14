@@ -4,9 +4,13 @@ import {
   NavUl,
   NavUlItems,
   Logo,
+  Icons,
   SearchIcon,
+  HamburgerIcons,
+  HamburgerOpen,
+  HamburgerClose,
 } from "./styles/Header.styled";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -15,6 +19,7 @@ const Headers = ({ showSearch }) => {
   const [prevScrollVal, setPrevScrollVal] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,6 +53,10 @@ const Headers = ({ showSearch }) => {
       navigate(`/explore/tv`);
     }
   };
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <NavBar $setnavbar={navbar}>
       <div className="logo">
@@ -57,7 +66,7 @@ const Headers = ({ showSearch }) => {
           onClick={() => handleHeaderNavigation("home")}
         />
       </div>
-      <NavUl className="nav-list">
+      <NavUl $menuOpen={menuOpen} $setnavbar={navbar}>
         <NavUlItems onClick={() => handleHeaderNavigation("movie")}>
           Movies
         </NavUlItems>
@@ -65,9 +74,19 @@ const Headers = ({ showSearch }) => {
           TV Shows
         </NavUlItems>
       </NavUl>
-      <SearchIcon className="search-bar" onClick={() => showSearch(true)}>
-        <FaSearch />
-      </SearchIcon>
+      <Icons>
+        <SearchIcon className="search-bar" onClick={() => showSearch(true)}>
+          <FaSearch />
+        </SearchIcon>
+        <HamburgerIcons>
+          <HamburgerOpen onClick={handleMenuToggle} $menuOpen={menuOpen}>
+            <FaBars />
+          </HamburgerOpen>
+          <HamburgerClose onClick={handleMenuToggle} $menuOpen={menuOpen}>
+            <FaTimes />
+          </HamburgerClose>
+        </HamburgerIcons>
+      </Icons>
     </NavBar>
   );
 };

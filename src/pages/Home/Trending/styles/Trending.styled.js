@@ -21,11 +21,8 @@ gap: 40px;
 }
 @media only screen and (max-width: 600px) {
   gap: 20px;
-  margin-left: 20px;
   flex-direction: column;
 }
-@media only screen and (max-width: 400px) {
-  margin-left: 20px;
-}
+
 
 `

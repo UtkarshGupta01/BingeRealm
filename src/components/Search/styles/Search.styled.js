@@ -16,6 +16,9 @@ export const SearchArea = styled.div`
   margin-top: 80px;
   gap: 20px;
   color: white;
+  @media only screen and (max-width: 340px) {
+    flex-direction: column-reverse;
+}
 `;
 
 export const SearchBar = styled.input`
@@ -26,6 +29,15 @@ export const SearchBar = styled.input`
   font-size: 22px;
   padding: 10px 20px;
   border-radius: 5px;
+  @media only screen and (max-width: 1056px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+    padding: 10px 10px;
+    width: 70%;
+  
+}
 `;
 
 export const SearchIcon = styled.div`
@@ -39,4 +51,11 @@ export const SearchIcon = styled.div`
   &:hover{
     border:2px solid white;
   }
+  @media only screen and (max-width: 1056px) {
+    font-size: 24px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
+  
+}
 `;
