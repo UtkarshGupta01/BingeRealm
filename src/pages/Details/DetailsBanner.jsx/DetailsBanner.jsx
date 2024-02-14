@@ -8,6 +8,7 @@ import youtubeicon from "/icons/youtube.png";
 import PropTypes from "prop-types";
 import {
   DetailsMain,
+  MediaDetails,
   Genre,
   HomepageLink,
   MediaDate,
@@ -63,7 +64,7 @@ const DetailsBanner = ({ director, writer, trailerId }) => {
         </MediaPoster>
 
         {/*  Media Details*/}
-        <div className="media_details">
+        <MediaDetails>
           {/* Title with year */}
           <MediaTitle>
             {data?.title || data?.name}
@@ -181,7 +182,7 @@ const DetailsBanner = ({ director, writer, trailerId }) => {
               </HomepageLink>
             </MediaHomepage>
           )}
-        </div>
+        </MediaDetails>
       </DetailsMain>
 
       {/* Video Popup */}
