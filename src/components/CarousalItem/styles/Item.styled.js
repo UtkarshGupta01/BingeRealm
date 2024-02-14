@@ -11,7 +11,7 @@ transition: all 0.35s;
 @media only screen and (max-width: 1056px) {
   width: 180px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     width: 130px; 
 }
   `
@@ -25,14 +25,14 @@ font-weight: 500;
 @media only screen and (max-width: 1056px) {
   font-size: 17px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     font-size: 15px; 
 }
 `
 export const CardMediaDate = styled.div`
 font-size: 14px;
 font-weight: 300;
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     font-size: 12px; 
 }
 `

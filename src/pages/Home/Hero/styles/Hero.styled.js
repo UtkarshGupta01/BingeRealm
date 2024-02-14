@@ -10,7 +10,7 @@ export const HeroContainer = styled.div`
   width: 100%;
   height: 660px;
   position: relative;
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     height: 500px;
 }
 `;
@@ -44,7 +44,7 @@ export const WelcomeArea = styled.div`
   color: white;
   text-align: center;
   width: 100%;
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     top:350px;
 }
 `;
@@ -55,7 +55,7 @@ export const Welcome = styled.div`
   @media only screen and (max-width: 1056px) {
     font-size: 30px;
 }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     font-size: 20px;
 }
 `;
@@ -67,7 +67,7 @@ export const WelcomeMsg = styled.div`
   @media only screen and (max-width: 1056px) {
     font-size: 18px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     font-size: 15px;
   }
   `;
@@ -80,7 +80,7 @@ export const SearchArea = styled.div`
   @media only screen and (max-width: 1056px) {
   margin-top: 30px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   margin-top: 20px;
   
 }
@@ -98,7 +98,7 @@ export const SearchBar = styled.input`
   @media only screen and (max-width: 1056px) {
     font-size: 18px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     border-radius: 10px 0 0 10px;
     padding: 8px 12px;
     font-size: 15px;
@@ -117,7 +117,7 @@ export const SearchIcon = styled.button`
     font-size: 20px;
     padding: 10.5px 16px 8px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     font-size: 18px;
     padding: 8px 13px 4.5px;
     border-radius: 0 10px 10px 0;

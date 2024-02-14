@@ -19,7 +19,7 @@ font-size: 17px;
 @media only screen and (max-width: 1056px) {
   padding:80px 10% 50px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   font-size: 15px;
   padding:60px 4% 40px;
 }
@@ -57,7 +57,7 @@ padding: 0 15% 40px;
   padding: 0 8% 40px;
   font-size: 14px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   padding: 0 2% 40px;
   font-size: 13px;
 }
@@ -68,7 +68,7 @@ export const ContactTitle = styled.div`
 font-size: 20px;
 font-weight: 600;
 color: white;
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   font-size: 18px;
 }
 
@@ -79,7 +79,7 @@ flex-wrap: wrap;
 justify-content: center;
 gap: 50px;
 padding: 50px 20px;
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   gap: 40px;
   padding: 30px 10px;
 }
@@ -90,7 +90,7 @@ font-size: 15px;
 font-weight: 400;
 color: #35405A;
 transition: all 0.4s;
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   font-size: 14px;
 }
 `
@@ -105,7 +105,7 @@ transition: all 0.4s;
 @media only screen and (max-width: 1056px) {
   font-size: 30px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   padding: 8px 13px 1px;
 }
 `
@@ -132,7 +132,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   font-size: 14px;
   padding: 10px 0;
 }

@@ -7,14 +7,10 @@ import Item from "../../components/CarousalItem/Item";
 import dayjs from "dayjs";
 import poster from "/images/Poster.png";
 
-import {
-  SearchFor,
-  Spinner,
-  MediaSection,
-  NotFound,
-} from "./styles/SearchedResult.styled";
+import { SearchFor, Spinner, NotFound } from "./styles/SearchedResult.styled";
 import spinner from "/gif/spinner.gif";
 import { useSelector } from "react-redux";
+import { MediaSection } from "../Explore/styles/Explore.styled";
 
 const SearchedResult = () => {
   const [data, setData] = useState(null);

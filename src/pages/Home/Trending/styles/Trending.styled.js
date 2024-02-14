@@ -7,7 +7,7 @@ export const Heading = styled.div`
   @media only screen and (max-width: 1056px) {
     font-size: 20px;
 }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     font-size: 18px;
 }
 `;
@@ -19,8 +19,13 @@ gap: 40px;
 @media only screen and (max-width: 1056px) {
   gap: 30px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   gap: 20px;
   margin-left: 20px;
+  flex-direction: column;
 }
+@media only screen and (max-width: 400px) {
+  margin-left: 20px;
+}
+
 `

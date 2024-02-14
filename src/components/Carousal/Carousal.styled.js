@@ -19,7 +19,7 @@ display: none;
     font-size: 25px;
 padding: 30px 18px 20px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     font-size: 20px;
     padding: 20px 16px 13px;
 }
@@ -39,7 +39,7 @@ export const CarousalSection = styled.div`
     padding: 15px;
     border-radius: 20px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     border-radius: 15px;
     padding: 10px;
 }
@@ -56,7 +56,7 @@ border-radius: 0 100px 100px 0;
     padding-left: 9px;
     padding-right: 27px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     padding-left: 8px;
     padding-right: 24px;
     
@@ -74,7 +74,7 @@ border-radius: 100px 0 0 100px;
     padding-left: 27px;
     padding-right: 9px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     padding-left: 24px;
     padding-right: 8px;
     
@@ -101,7 +101,7 @@ padding: 12px 50px;
   margin-left: -15px;
   padding: 10px 30px;
   }
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 600px) {
     margin-right: -10px;
   margin-left: -10px;
   padding: 9px 20px;

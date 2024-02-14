@@ -6,7 +6,7 @@ justify-content: center;
 gap: 20px;
 flex-wrap: wrap;
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   gap: 5px;
 }
 `
@@ -18,7 +18,7 @@ font-weight: 400;
 color: #35405A;
 transition: all 0.4s;
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   font-size: 14px;
 }
 `
@@ -35,7 +35,7 @@ transition: all 0.4s;
   border-radius: 15px;
   
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   width: 48%;
   border-radius: 15px;
   padding: 10px;
