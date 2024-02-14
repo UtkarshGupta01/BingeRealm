@@ -4,7 +4,6 @@ export const DetailsMain = styled.div`
 color: white;
 margin:  100px 50px 0;
 display: flex;
-flex-wrap: wrap;
 padding: 40px;
 background-color: #1e2433;
 border-radius: 25px;
@@ -12,6 +11,9 @@ box-shadow: inset 0 0 25px 0 black;
 justify-content: flex-start;
 gap: 60px;
 font-weight: 500;
+@media only screen and (max-width: 1056px) {
+  flex-wrap: wrap;  
+  }
 @media only screen and (max-width: 600px) {
   margin:  100px 5px 0;
   gap: 40px;
@@ -26,10 +28,9 @@ font-weight: 500;
 export const MediaPoster = styled.div`
 min-width: 380px;
 max-width: 400px;
-@media only screen and (max-width: 1352px) {
+@media only screen and (max-width: 1056px) {
   display: block;
   margin: 0 auto;
-  max-width: 600px;
   }
 @media only screen and (max-width: 600px) {
   min-width: 0;
@@ -55,11 +56,9 @@ font-weight: 600;
 display: flex;
 align-items: center;
 gap: 10px;
+justify-content: center;
 @media only screen and (max-width: 1056px) {
   font-size: 25px;
-}
-@media only screen and (max-width: 1352px) {
-  justify-content: center;
 }
 @media only screen and (max-width: 425px) {
     font-size: 20px;
@@ -79,11 +78,9 @@ export const MediaTagline = styled.div`
 font-size: 18px;
 opacity: 0.7;
 margin-top:-5px;
+text-align: center;
 @media only screen and (max-width: 1056px) {
   font-size: 16px;
-}
-@media only screen and (max-width: 1352px) {
-  text-align: center;
 }
 @media only screen and (max-width: 425px) {
     margin-top:0;
@@ -97,11 +94,9 @@ display: flex;
 flex-wrap: wrap;
 margin-top: 15px;
 gap:10px;
+justify-content: center;
 @media only screen and (max-width: 1056px) {
   margin-top: 10px;
-  }
-  @media only screen and (max-width: 1352px) {
-  justify-content: center;
   }
 
 `
