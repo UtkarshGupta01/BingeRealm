@@ -11,7 +11,6 @@ import Footer from "./components/Footer/Footer";
 import Details from "./pages/Details/Details";
 import Explore from "./pages/Explore/Explore";
 import SearchedResult from "./pages/SearchedResults/SearchedResult";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   const [search, setSearch] = useState(false);
@@ -66,7 +65,6 @@ function App() {
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="/search/:query" element={<SearchedResult />} />
-        <Route path="/*?#@" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>

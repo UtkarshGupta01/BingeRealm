@@ -14,6 +14,7 @@ import {
 import { FaSearch } from "react-icons/fa";
 import useFetch from "../../../hooks/useFetch";
 import { useSelector } from "react-redux";
+import HeroDemo from "/images/HeroDemo.jpg";
 
 const Hero = () => {
   const [background, setBackground] = useState("");
@@ -32,9 +33,10 @@ const Hero = () => {
   );
 
   useEffect(() => {
-    const bg =
-      url.backdrop +
-      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+    const bg = url.backdrop
+      ? url.backdrop +
+        data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path
+      : HeroDemo;
     setBackground(bg);
   }, [data]);
 
@@ -52,7 +54,8 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <HeroImg src={background} />
+      {loading ? <HeroImg src={HeroDemo} /> : <HeroImg src={background} />}
+
       <WelcomeArea>
         <Welcome>
           Welcome to Binge<font color="red">Verse</font>
